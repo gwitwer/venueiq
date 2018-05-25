@@ -1,0 +1,40 @@
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
+		meta(http-equiv="Content-type", content="text/html;charset=UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1")
+			
+		script(src="https://unpkg.com/axios/dist/axios.min.js")
+
+		title= title
+		
+	body
+		#fb-root
+		script.
+			(function(d, s, id) {
+				var js, fjs = d.getElementsByTagName(s)[0];
+				if (d.getElementById(id)) return;
+				js = d.createElement(s); js.id = id;
+				js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0&appId=1547931398624085&autoLogAppEvents=1';
+				fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));
+			window.fbAsyncInit = function() {
+				FB.init({ appId: '1547931398624085', version: 'v3.0' });
+				console.log('run init');
+				setTimeout(function() {
+					if (typeof(window.pageCode) !== 'undefined') {
+						window.pageCode();
+					}
+				}, 0);
+			};
+
+		#main
+			.header
+				.logo
+				h1.text-center #{title}
+			block content
+		.footer
+			div
+				div &copy; Venue Analytics 2018
