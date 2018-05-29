@@ -6,6 +6,8 @@ import * as AuthController from '../controllers/auth.controller';
  * @returns void
  */
 const authRoutes = router => {
+  router.get('/home', AuthController.getHome);
+
   router.get('/start', AuthController.getStart);
 
   router.get('/login', AuthController.getLogin);
