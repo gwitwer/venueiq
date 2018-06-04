@@ -2,13 +2,15 @@
 import Event from './models/event';
 
 export default function() {
-  const eventCount = Event.count().exec();
-  eventCount.then(count => {
-    if (!count) {
+  // const eventCount = Event.count().exec();
+  const removeEvents = Event.remove({}).exec();
+  removeEvents.then(() => {
+    if (true) {
       const event1 = new Event({
         name: 'Latin Night',
         type: 'latin',
         cuid: '1',
+        uid: '1',
         dateLastUpdated: new Date(),
         time: new Date('November 9, 2018'),
         tags: ['dance', 'recurring', 'music', 'dj'],
@@ -62,6 +64,7 @@ export default function() {
         name: 'Borinquen',
         type: 'latin',
         cuid: '2',
+        uid: '1',
         dateLastUpdated: new Date(),
         time: new Date('January 27, 2018'),
         tags: ['dance', 'music', 'benefit'],
@@ -115,6 +118,7 @@ export default function() {
         name: 'Subset at Serendipity',
         type: 'electronic',
         cuid: '3',
+        uid: '1',
         dateLastUpdated: new Date(),
         time: new Date('April 21, 2018'),
         tags: ['music', 'dj'],

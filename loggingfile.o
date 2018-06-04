@@ -7,7 +7,6 @@
 [33m[nodemon] to restart at any time, enter `rs`[39m
 [33m[nodemon] or send SIGHUP to 22792 to restart[39m
 [33m[nodemon] ignoring: .git node_modules/**/node_modules[39m
-[33m[nodemon] watching: /Users/george/venueiq/server/**/* /Users/george/venueiq/Intl/**/*[39m
 [33m[nodemon] watching extensions: js,json[39m
 [32m[nodemon] starting `node index.js`[39m
 [33m[nodemon] forking[39m
@@ -45,7 +44,7 @@ checking user
 Response: {"data":[{"date_start":"2017-01-01","date_stop":"2018-05-24","impressions":"3","spend":"0.009999","account_id":"618458151696839","campaign_id":"23842603670470754","adset_id":"23842610630830754","ad_id":"23842610630850754","age":"13-17","gender":"male"},{"date_start":"2017-01-01","date_stop":"2018-05-24","impressions":"1","spend":"0","account_id":"618458151696839","campaign_id":"23842603564180754","adset_id":"23842610644270754","ad_id":"23842610644290754","age":"13-17","gender":"male"},{"date_start":"2017-01-01","date_stop":"2018-05-24","impressions":"1","spend":"0","account_id":"618458151696839","campaign_id":"23842603670470754","adset_id":"23842611864970754","ad_id":"23842619935320754","age":"13-17","gender":"male"},{"date_start":"2017-01-01","date_stop":"2018-05-24","impressions":"1","spend":"0","account_id":"618458151696839","campaign_id":"23842603564180754","adset_id":"23842610631060754","ad_id":"23842610631080754","age":"13-17","gender":"male"},{"date_start":"2017-01-01","date_stop":"2018-05-24","impressions":"46844","spend":"203.157228","account_id":"618458151696839","campaign_id":"23842603564180754","adset_id":"23842603718630754","ad_id":"23842603718650754","age":"18-24","gender":"female"},{"date_start":"2017-01-01","date_stop":"2018-05-24","impressions":"1321","spend":"4.979272","account_id":"618458151696839","campaign_id":"23842603670470754","adset_id":"23842605822140754","ad_id":"23842606942700754","age":"18-24","gender":"female"},{"date_start":"2017-01-01","date_stop":"2018-05-24","impressions":"5209","spend":"23.338575","account_id":"618458151696839","campaign_id":"23842603670470754","adset_id":"23842605501490754","ad_id":"23842606987980754","age":"18-24","gender":"female"},{"date_start":"2017-01-01","date_stop":"2018-05-24","impressions":"3617","spend":"24.337554","account_id":"618458151696839","campaign_id":"23842568553870754","adset_id":"23842568554020754","ad_id":"23842568554610754","age":"18-24","gender":"female"},{"date_start":"2017-01-01","date_stop":"2018-05-24","impressions":"185","spend":"1.17964","account_id":"618458151696839","campaign_id":"23842650408920754","adset_id":"23842650475040754","ad_id":"23842654612160754","age":"18-24","gender":"female"},{"date_start":"2017-01-01","date_stop":"2018-05-24","impressions":"6114","spend":"37.855414","account_id":"618458151696839","campaign_id":"23842603564180754","adset_id":"23842610631060754","ad_id":"23842610631080754","age":"18-24","gender":"female"},{"date_start":"2017-01-01","date_stop":"2018-05-24","impressions":"40367","spend":"125.502067","account_id":"618458151696839","campaign_id":"23842603564180754","adset_id":"23842603564240754","ad_id":"23842603564330754","age":"18-24","gender":"female"},{"date_start":"2017-01-01","date_stop":"2018-05-24","impressions":"1121","spend":"5.11947","account_id":"618458151696839","campaign_id":"23842603564180754","adset_id":"23842610646700754","ad_id":"23842628616240754","age":"18-24","gender":"female"},{"date_start":"2017-01-01","date_stop":"2018-05-24","impressions":"1202","spend":"10.438407","account_id":"618458151696839","campaign_id":"23842650408920754","adset_id":"23842650475040754","ad_id":"23842651964670754","age":"18-24","gender":"female"},{"date_start":"2017-01-01","date_stop":"2018-05-24","impressions":"144","spend":"1.965644","account_id":"618458151696839","campaign_id":"23842650408920754","adset_id":"23842650475040754","ad_id":"23842652316460754","age":"18-24","gender":"female"},{"date_start":"2017-01-01","date_stop":"2018-05-24","impressions":"217","spend":"0.729376","account_id":"618458151696839","campaign_id":"23842650408920754","adset_id":"23842650408930754","ad_id":"23842654612140754","age":"18-24","gender":"female"},{"date_start":"2017-01-01","date_stop":"2018-05-24","impressions":"768","spend":"6.398383","account_id":"618458151696839","campaign_id":"23842603564180754","adset_id":"23842610646700754","ad_id":"23842628611570754","age":"18-24","gender":"female"},{"date_start":"2017-01-01","date_stop":"2018-05-24","impressions":"919","spend":"4.359542","account_id":"618458151696839","campaign_id":"23842603564180754","adset_id":"23842610644270754","ad_id":"23842610644290754","age":"18-24","gender":"female"},{"date_start":"2017-01-01","date_stop":"2018-05-24","impressions":"9324","spend":"26.417265","account_id":"618458151696839","campaign_id":"23842603670470754","adset_id":"23842611864970754","ad_id":"23842611864990754","age":"18-24","gender":"female"},{"date_start":"2017-01-01","date_stop":"2018-05-24","impressions":"101609","spend":"377.888672","account_id":"618458151696839","campaign_id":"23842568066980754","adset_id":"23842568067030754","ad_id":"23842568067150754","age":"18-24","gender":"female"},{"date_start":"2017-01-01","date_stop":"2018-05-24","impressions":"731","spend":"2.719729","account_id":"618458151696839","campaign_id":"23842603564180754","adset_id":"23842612415560754","ad_id":"23842612415660754","age":"18-24","gender":"female"},{"date_start":"2017-01-01","date_stop":"2018-05-24","impressions":"71227","spend":"882.725446","account_id":"618458151696839","campaign_id":"23842578621810754","adset_id":"23842578621790754","ad_id":"23842578621800754","age":"18-24","gender":"female"},{"date_start":"2017-01-01","date_stop":"2018-05-24","impressions":"1","spend":"0","account_id":"618458151696839","campaign_id":"23842603670470754","adset_id":"23842611864970754","ad_id":"23842628614840754","age":"18-24","gender":"female"},{"date_start":"2017-01-01","date_stop":"2018-05-24","impressions":"2149","spend":"9.568777","account_id":"618458151696839","campaign_id":"23842650408920754","adset_id":"23842650408930754","ad_id":"23842651964660754","age":"18-24","gender":"female"},{"date_start":"2017-01-01","date_stop":"2018-05-24","impressions":"4827","spend":"24.685064","account_id":"618458151696839","campaign_id":"23842568547330754","adset_id":"23842568547340754","ad_id":"23842568547320754","age":"18-24","gender":"female"},{"date_start":"2017-01-01","date_stop":"2018-05-24","impressions":"9906","spend":"41.02475","account_id":"618458151696839","campaign_id":"23842603564180754","adset_id":"23842611869070754","ad_id":"23842628610160754","age":"18-24","gender":"female"}],"paging":{"cursors":{"before":"MAZDZD","after":"MjQZD"},"next":"https://graph.facebook.com/v2.12/act_618458151696839/insights?access_token=EAAVZC1d0m01UBAH70PiPhG99WlFUGwZCijQZAKiRfaSryytdRPlZC4GypOMGgyGyUOrDIo5uftZBu9ZBtZCDQvq8QlkxGj5F5lOujRfLawAsM8ZBU4hgECeHbAGFt1lVDfVHoiVF7n6sgIr1jYvXHoAWZCzITLP3I5tUZD&fields&filtering=%5B%5D&breakdowns=%5B%22age%22%2C%22gender%22%5D&level=ad&time_range=%7B%22since%22%3A%222017-01-01%22%2C%22until%22%3A%222018-05-24%22%7D&limit=25&after=MjQZD"}}
 ads_insights api call complete.
 [ AdsInsights {
-    _data: 
+    _data:
      { date_start: '2017-01-01',
        date_stop: '2018-05-24',
        impressions: '3',
@@ -56,7 +55,7 @@ ads_insights api call complete.
        ad_id: '23842610630850754',
        age: '13-17',
        gender: 'male' },
-    _fields: 
+    _fields:
      [ 'account_currency',
        'account_id',
        'account_name',
@@ -133,7 +132,7 @@ ads_insights api call complete.
        'video_p95_watched_actions',
        'website_ctr',
        'website_purchase_roas' ],
-    _changes: 
+    _changes:
      { date_start: '2017-01-01',
        date_stop: '2018-05-24',
        impressions: '3',
@@ -221,7 +220,7 @@ ads_insights api call complete.
     website_ctr: [Getter/Setter],
     website_purchase_roas: [Getter/Setter],
     _parentId: undefined,
-    _api: 
+    _api:
      FacebookAdsApi {
        accessToken: 'EAAVZC1d0m01UBAH70PiPhG99WlFUGwZCijQZAKiRfaSryytdRPlZC4GypOMGgyGyUOrDIo5uftZBu9ZBtZCDQvq8QlkxGj5F5lOujRfLawAsM8ZBU4hgECeHbAGFt1lVDfVHoiVF7n6sgIr1jYvXHoAWZCzITLP3I5tUZD',
        locale: 'en_US',
@@ -229,7 +228,7 @@ ads_insights api call complete.
     age: [Getter/Setter],
     gender: [Getter/Setter] },
   AdsInsights {
-    _data: 
+    _data:
      { date_start: '2017-01-01',
        date_stop: '2018-05-24',
        impressions: '1',
@@ -240,7 +239,7 @@ ads_insights api call complete.
        ad_id: '23842610644290754',
        age: '13-17',
        gender: 'male' },
-    _fields: 
+    _fields:
      [ 'account_currency',
        'account_id',
        'account_name',
@@ -317,7 +316,7 @@ ads_insights api call complete.
        'video_p95_watched_actions',
        'website_ctr',
        'website_purchase_roas' ],
-    _changes: 
+    _changes:
      { date_start: '2017-01-01',
        date_stop: '2018-05-24',
        impressions: '1',
@@ -405,7 +404,7 @@ ads_insights api call complete.
     website_ctr: [Getter/Setter],
     website_purchase_roas: [Getter/Setter],
     _parentId: undefined,
-    _api: 
+    _api:
      FacebookAdsApi {
        accessToken: 'EAAVZC1d0m01UBAH70PiPhG99WlFUGwZCijQZAKiRfaSryytdRPlZC4GypOMGgyGyUOrDIo5uftZBu9ZBtZCDQvq8QlkxGj5F5lOujRfLawAsM8ZBU4hgECeHbAGFt1lVDfVHoiVF7n6sgIr1jYvXHoAWZCzITLP3I5tUZD',
        locale: 'en_US',
@@ -413,7 +412,7 @@ ads_insights api call complete.
     age: [Getter/Setter],
     gender: [Getter/Setter] },
   AdsInsights {
-    _data: 
+    _data:
      { date_start: '2017-01-01',
        date_stop: '2018-05-24',
        impressions: '1',
@@ -424,7 +423,7 @@ ads_insights api call complete.
        ad_id: '23842619935320754',
        age: '13-17',
        gender: 'male' },
-    _fields: 
+    _fields:
      [ 'account_currency',
        'account_id',
        'account_name',
@@ -501,7 +500,7 @@ ads_insights api call complete.
        'video_p95_watched_actions',
        'website_ctr',
        'website_purchase_roas' ],
-    _changes: 
+    _changes:
      { date_start: '2017-01-01',
        date_stop: '2018-05-24',
        impressions: '1',
@@ -589,7 +588,7 @@ ads_insights api call complete.
     website_ctr: [Getter/Setter],
     website_purchase_roas: [Getter/Setter],
     _parentId: undefined,
-    _api: 
+    _api:
      FacebookAdsApi {
        accessToken: 'EAAVZC1d0m01UBAH70PiPhG99WlFUGwZCijQZAKiRfaSryytdRPlZC4GypOMGgyGyUOrDIo5uftZBu9ZBtZCDQvq8QlkxGj5F5lOujRfLawAsM8ZBU4hgECeHbAGFt1lVDfVHoiVF7n6sgIr1jYvXHoAWZCzITLP3I5tUZD',
        locale: 'en_US',
@@ -597,7 +596,7 @@ ads_insights api call complete.
     age: [Getter/Setter],
     gender: [Getter/Setter] },
   AdsInsights {
-    _data: 
+    _data:
      { date_start: '2017-01-01',
        date_stop: '2018-05-24',
        impressions: '1',
@@ -608,7 +607,7 @@ ads_insights api call complete.
        ad_id: '23842610631080754',
        age: '13-17',
        gender: 'male' },
-    _fields: 
+    _fields:
      [ 'account_currency',
        'account_id',
        'account_name',
@@ -685,7 +684,7 @@ ads_insights api call complete.
        'video_p95_watched_actions',
        'website_ctr',
        'website_purchase_roas' ],
-    _changes: 
+    _changes:
      { date_start: '2017-01-01',
        date_stop: '2018-05-24',
        impressions: '1',
@@ -773,7 +772,7 @@ ads_insights api call complete.
     website_ctr: [Getter/Setter],
     website_purchase_roas: [Getter/Setter],
     _parentId: undefined,
-    _api: 
+    _api:
      FacebookAdsApi {
        accessToken: 'EAAVZC1d0m01UBAH70PiPhG99WlFUGwZCijQZAKiRfaSryytdRPlZC4GypOMGgyGyUOrDIo5uftZBu9ZBtZCDQvq8QlkxGj5F5lOujRfLawAsM8ZBU4hgECeHbAGFt1lVDfVHoiVF7n6sgIr1jYvXHoAWZCzITLP3I5tUZD',
        locale: 'en_US',
@@ -781,7 +780,7 @@ ads_insights api call complete.
     age: [Getter/Setter],
     gender: [Getter/Setter] },
   AdsInsights {
-    _data: 
+    _data:
      { date_start: '2017-01-01',
        date_stop: '2018-05-24',
        impressions: '46844',
@@ -792,7 +791,7 @@ ads_insights api call complete.
        ad_id: '23842603718650754',
        age: '18-24',
        gender: 'female' },
-    _fields: 
+    _fields:
      [ 'account_currency',
        'account_id',
        'account_name',
@@ -869,7 +868,7 @@ ads_insights api call complete.
        'video_p95_watched_actions',
        'website_ctr',
        'website_purchase_roas' ],
-    _changes: 
+    _changes:
      { date_start: '2017-01-01',
        date_stop: '2018-05-24',
        impressions: '46844',
@@ -957,7 +956,7 @@ ads_insights api call complete.
     website_ctr: [Getter/Setter],
     website_purchase_roas: [Getter/Setter],
     _parentId: undefined,
-    _api: 
+    _api:
      FacebookAdsApi {
        accessToken: 'EAAVZC1d0m01UBAH70PiPhG99WlFUGwZCijQZAKiRfaSryytdRPlZC4GypOMGgyGyUOrDIo5uftZBu9ZBtZCDQvq8QlkxGj5F5lOujRfLawAsM8ZBU4hgECeHbAGFt1lVDfVHoiVF7n6sgIr1jYvXHoAWZCzITLP3I5tUZD',
        locale: 'en_US',
@@ -965,7 +964,7 @@ ads_insights api call complete.
     age: [Getter/Setter],
     gender: [Getter/Setter] },
   AdsInsights {
-    _data: 
+    _data:
      { date_start: '2017-01-01',
        date_stop: '2018-05-24',
        impressions: '1321',
@@ -976,7 +975,7 @@ ads_insights api call complete.
        ad_id: '23842606942700754',
        age: '18-24',
        gender: 'female' },
-    _fields: 
+    _fields:
      [ 'account_currency',
        'account_id',
        'account_name',
@@ -1053,7 +1052,7 @@ ads_insights api call complete.
        'video_p95_watched_actions',
        'website_ctr',
        'website_purchase_roas' ],
-    _changes: 
+    _changes:
      { date_start: '2017-01-01',
        date_stop: '2018-05-24',
        impressions: '1321',
@@ -1141,7 +1140,7 @@ ads_insights api call complete.
     website_ctr: [Getter/Setter],
     website_purchase_roas: [Getter/Setter],
     _parentId: undefined,
-    _api: 
+    _api:
      FacebookAdsApi {
        accessToken: 'EAAVZC1d0m01UBAH70PiPhG99WlFUGwZCijQZAKiRfaSryytdRPlZC4GypOMGgyGyUOrDIo5uftZBu9ZBtZCDQvq8QlkxGj5F5lOujRfLawAsM8ZBU4hgECeHbAGFt1lVDfVHoiVF7n6sgIr1jYvXHoAWZCzITLP3I5tUZD',
        locale: 'en_US',
@@ -1149,7 +1148,7 @@ ads_insights api call complete.
     age: [Getter/Setter],
     gender: [Getter/Setter] },
   AdsInsights {
-    _data: 
+    _data:
      { date_start: '2017-01-01',
        date_stop: '2018-05-24',
        impressions: '5209',
@@ -1160,7 +1159,7 @@ ads_insights api call complete.
        ad_id: '23842606987980754',
        age: '18-24',
        gender: 'female' },
-    _fields: 
+    _fields:
      [ 'account_currency',
        'account_id',
        'account_name',
@@ -1237,7 +1236,7 @@ ads_insights api call complete.
        'video_p95_watched_actions',
        'website_ctr',
        'website_purchase_roas' ],
-    _changes: 
+    _changes:
      { date_start: '2017-01-01',
        date_stop: '2018-05-24',
        impressions: '5209',
@@ -1325,7 +1324,7 @@ ads_insights api call complete.
     website_ctr: [Getter/Setter],
     website_purchase_roas: [Getter/Setter],
     _parentId: undefined,
-    _api: 
+    _api:
      FacebookAdsApi {
        accessToken: 'EAAVZC1d0m01UBAH70PiPhG99WlFUGwZCijQZAKiRfaSryytdRPlZC4GypOMGgyGyUOrDIo5uftZBu9ZBtZCDQvq8QlkxGj5F5lOujRfLawAsM8ZBU4hgECeHbAGFt1lVDfVHoiVF7n6sgIr1jYvXHoAWZCzITLP3I5tUZD',
        locale: 'en_US',
@@ -1333,7 +1332,7 @@ ads_insights api call complete.
     age: [Getter/Setter],
     gender: [Getter/Setter] },
   AdsInsights {
-    _data: 
+    _data:
      { date_start: '2017-01-01',
        date_stop: '2018-05-24',
        impressions: '3617',
@@ -1344,7 +1343,7 @@ ads_insights api call complete.
        ad_id: '23842568554610754',
        age: '18-24',
        gender: 'female' },
-    _fields: 
+    _fields:
      [ 'account_currency',
        'account_id',
        'account_name',
@@ -1421,7 +1420,7 @@ ads_insights api call complete.
        'video_p95_watched_actions',
        'website_ctr',
        'website_purchase_roas' ],
-    _changes: 
+    _changes:
      { date_start: '2017-01-01',
        date_stop: '2018-05-24',
        impressions: '3617',
@@ -1509,7 +1508,7 @@ ads_insights api call complete.
     website_ctr: [Getter/Setter],
     website_purchase_roas: [Getter/Setter],
     _parentId: undefined,
-    _api: 
+    _api:
      FacebookAdsApi {
        accessToken: 'EAAVZC1d0m01UBAH70PiPhG99WlFUGwZCijQZAKiRfaSryytdRPlZC4GypOMGgyGyUOrDIo5uftZBu9ZBtZCDQvq8QlkxGj5F5lOujRfLawAsM8ZBU4hgECeHbAGFt1lVDfVHoiVF7n6sgIr1jYvXHoAWZCzITLP3I5tUZD',
        locale: 'en_US',
@@ -1517,7 +1516,7 @@ ads_insights api call complete.
     age: [Getter/Setter],
     gender: [Getter/Setter] },
   AdsInsights {
-    _data: 
+    _data:
      { date_start: '2017-01-01',
        date_stop: '2018-05-24',
        impressions: '185',
@@ -1528,7 +1527,7 @@ ads_insights api call complete.
        ad_id: '23842654612160754',
        age: '18-24',
        gender: 'female' },
-    _fields: 
+    _fields:
      [ 'account_currency',
        'account_id',
        'account_name',
@@ -1605,7 +1604,7 @@ ads_insights api call complete.
        'video_p95_watched_actions',
        'website_ctr',
        'website_purchase_roas' ],
-    _changes: 
+    _changes:
      { date_start: '2017-01-01',
        date_stop: '2018-05-24',
        impressions: '185',
@@ -1693,7 +1692,7 @@ ads_insights api call complete.
     website_ctr: [Getter/Setter],
     website_purchase_roas: [Getter/Setter],
     _parentId: undefined,
-    _api: 
+    _api:
      FacebookAdsApi {
        accessToken: 'EAAVZC1d0m01UBAH70PiPhG99WlFUGwZCijQZAKiRfaSryytdRPlZC4GypOMGgyGyUOrDIo5uftZBu9ZBtZCDQvq8QlkxGj5F5lOujRfLawAsM8ZBU4hgECeHbAGFt1lVDfVHoiVF7n6sgIr1jYvXHoAWZCzITLP3I5tUZD',
        locale: 'en_US',
@@ -1701,7 +1700,7 @@ ads_insights api call complete.
     age: [Getter/Setter],
     gender: [Getter/Setter] },
   AdsInsights {
-    _data: 
+    _data:
      { date_start: '2017-01-01',
        date_stop: '2018-05-24',
        impressions: '6114',
@@ -1712,7 +1711,7 @@ ads_insights api call complete.
        ad_id: '23842610631080754',
        age: '18-24',
        gender: 'female' },
-    _fields: 
+    _fields:
      [ 'account_currency',
        'account_id',
        'account_name',
@@ -1789,7 +1788,7 @@ ads_insights api call complete.
        'video_p95_watched_actions',
        'website_ctr',
        'website_purchase_roas' ],
-    _changes: 
+    _changes:
      { date_start: '2017-01-01',
        date_stop: '2018-05-24',
        impressions: '6114',
@@ -1877,7 +1876,7 @@ ads_insights api call complete.
     website_ctr: [Getter/Setter],
     website_purchase_roas: [Getter/Setter],
     _parentId: undefined,
-    _api: 
+    _api:
      FacebookAdsApi {
        accessToken: 'EAAVZC1d0m01UBAH70PiPhG99WlFUGwZCijQZAKiRfaSryytdRPlZC4GypOMGgyGyUOrDIo5uftZBu9ZBtZCDQvq8QlkxGj5F5lOujRfLawAsM8ZBU4hgECeHbAGFt1lVDfVHoiVF7n6sgIr1jYvXHoAWZCzITLP3I5tUZD',
        locale: 'en_US',
@@ -1885,7 +1884,7 @@ ads_insights api call complete.
     age: [Getter/Setter],
     gender: [Getter/Setter] },
   AdsInsights {
-    _data: 
+    _data:
      { date_start: '2017-01-01',
        date_stop: '2018-05-24',
        impressions: '40367',
@@ -1896,7 +1895,7 @@ ads_insights api call complete.
        ad_id: '23842603564330754',
        age: '18-24',
        gender: 'female' },
-    _fields: 
+    _fields:
      [ 'account_currency',
        'account_id',
        'account_name',
@@ -1973,7 +1972,7 @@ ads_insights api call complete.
        'video_p95_watched_actions',
        'website_ctr',
        'website_purchase_roas' ],
-    _changes: 
+    _changes:
      { date_start: '2017-01-01',
        date_stop: '2018-05-24',
        impressions: '40367',
@@ -2061,7 +2060,7 @@ ads_insights api call complete.
     website_ctr: [Getter/Setter],
     website_purchase_roas: [Getter/Setter],
     _parentId: undefined,
-    _api: 
+    _api:
      FacebookAdsApi {
        accessToken: 'EAAVZC1d0m01UBAH70PiPhG99WlFUGwZCijQZAKiRfaSryytdRPlZC4GypOMGgyGyUOrDIo5uftZBu9ZBtZCDQvq8QlkxGj5F5lOujRfLawAsM8ZBU4hgECeHbAGFt1lVDfVHoiVF7n6sgIr1jYvXHoAWZCzITLP3I5tUZD',
        locale: 'en_US',
@@ -2069,7 +2068,7 @@ ads_insights api call complete.
     age: [Getter/Setter],
     gender: [Getter/Setter] },
   AdsInsights {
-    _data: 
+    _data:
      { date_start: '2017-01-01',
        date_stop: '2018-05-24',
        impressions: '1121',
@@ -2080,7 +2079,7 @@ ads_insights api call complete.
        ad_id: '23842628616240754',
        age: '18-24',
        gender: 'female' },
-    _fields: 
+    _fields:
      [ 'account_currency',
        'account_id',
        'account_name',
@@ -2157,7 +2156,7 @@ ads_insights api call complete.
        'video_p95_watched_actions',
        'website_ctr',
        'website_purchase_roas' ],
-    _changes: 
+    _changes:
      { date_start: '2017-01-01',
        date_stop: '2018-05-24',
        impressions: '1121',
@@ -2245,7 +2244,7 @@ ads_insights api call complete.
     website_ctr: [Getter/Setter],
     website_purchase_roas: [Getter/Setter],
     _parentId: undefined,
-    _api: 
+    _api:
      FacebookAdsApi {
        accessToken: 'EAAVZC1d0m01UBAH70PiPhG99WlFUGwZCijQZAKiRfaSryytdRPlZC4GypOMGgyGyUOrDIo5uftZBu9ZBtZCDQvq8QlkxGj5F5lOujRfLawAsM8ZBU4hgECeHbAGFt1lVDfVHoiVF7n6sgIr1jYvXHoAWZCzITLP3I5tUZD',
        locale: 'en_US',
@@ -2253,7 +2252,7 @@ ads_insights api call complete.
     age: [Getter/Setter],
     gender: [Getter/Setter] },
   AdsInsights {
-    _data: 
+    _data:
      { date_start: '2017-01-01',
        date_stop: '2018-05-24',
        impressions: '1202',
@@ -2264,7 +2263,7 @@ ads_insights api call complete.
        ad_id: '23842651964670754',
        age: '18-24',
        gender: 'female' },
-    _fields: 
+    _fields:
      [ 'account_currency',
        'account_id',
        'account_name',
@@ -2341,7 +2340,7 @@ ads_insights api call complete.
        'video_p95_watched_actions',
        'website_ctr',
        'website_purchase_roas' ],
-    _changes: 
+    _changes:
      { date_start: '2017-01-01',
        date_stop: '2018-05-24',
        impressions: '1202',
@@ -2429,7 +2428,7 @@ ads_insights api call complete.
     website_ctr: [Getter/Setter],
     website_purchase_roas: [Getter/Setter],
     _parentId: undefined,
-    _api: 
+    _api:
      FacebookAdsApi {
        accessToken: 'EAAVZC1d0m01UBAH70PiPhG99WlFUGwZCijQZAKiRfaSryytdRPlZC4GypOMGgyGyUOrDIo5uftZBu9ZBtZCDQvq8QlkxGj5F5lOujRfLawAsM8ZBU4hgECeHbAGFt1lVDfVHoiVF7n6sgIr1jYvXHoAWZCzITLP3I5tUZD',
        locale: 'en_US',
@@ -2437,7 +2436,7 @@ ads_insights api call complete.
     age: [Getter/Setter],
     gender: [Getter/Setter] },
   AdsInsights {
-    _data: 
+    _data:
      { date_start: '2017-01-01',
        date_stop: '2018-05-24',
        impressions: '144',
@@ -2448,7 +2447,7 @@ ads_insights api call complete.
        ad_id: '23842652316460754',
        age: '18-24',
        gender: 'female' },
-    _fields: 
+    _fields:
      [ 'account_currency',
        'account_id',
        'account_name',
@@ -2525,7 +2524,7 @@ ads_insights api call complete.
        'video_p95_watched_actions',
        'website_ctr',
        'website_purchase_roas' ],
-    _changes: 
+    _changes:
      { date_start: '2017-01-01',
        date_stop: '2018-05-24',
        impressions: '144',
@@ -2613,7 +2612,7 @@ ads_insights api call complete.
     website_ctr: [Getter/Setter],
     website_purchase_roas: [Getter/Setter],
     _parentId: undefined,
-    _api: 
+    _api:
      FacebookAdsApi {
        accessToken: 'EAAVZC1d0m01UBAH70PiPhG99WlFUGwZCijQZAKiRfaSryytdRPlZC4GypOMGgyGyUOrDIo5uftZBu9ZBtZCDQvq8QlkxGj5F5lOujRfLawAsM8ZBU4hgECeHbAGFt1lVDfVHoiVF7n6sgIr1jYvXHoAWZCzITLP3I5tUZD',
        locale: 'en_US',
@@ -2621,7 +2620,7 @@ ads_insights api call complete.
     age: [Getter/Setter],
     gender: [Getter/Setter] },
   AdsInsights {
-    _data: 
+    _data:
      { date_start: '2017-01-01',
        date_stop: '2018-05-24',
        impressions: '217',
@@ -2632,7 +2631,7 @@ ads_insights api call complete.
        ad_id: '23842654612140754',
        age: '18-24',
        gender: 'female' },
-    _fields: 
+    _fields:
      [ 'account_currency',
        'account_id',
        'account_name',
@@ -2709,7 +2708,7 @@ ads_insights api call complete.
        'video_p95_watched_actions',
        'website_ctr',
        'website_purchase_roas' ],
-    _changes: 
+    _changes:
      { date_start: '2017-01-01',
        date_stop: '2018-05-24',
        impressions: '217',
@@ -2797,7 +2796,7 @@ ads_insights api call complete.
     website_ctr: [Getter/Setter],
     website_purchase_roas: [Getter/Setter],
     _parentId: undefined,
-    _api: 
+    _api:
      FacebookAdsApi {
        accessToken: 'EAAVZC1d0m01UBAH70PiPhG99WlFUGwZCijQZAKiRfaSryytdRPlZC4GypOMGgyGyUOrDIo5uftZBu9ZBtZCDQvq8QlkxGj5F5lOujRfLawAsM8ZBU4hgECeHbAGFt1lVDfVHoiVF7n6sgIr1jYvXHoAWZCzITLP3I5tUZD',
        locale: 'en_US',
@@ -2805,7 +2804,7 @@ ads_insights api call complete.
     age: [Getter/Setter],
     gender: [Getter/Setter] },
   AdsInsights {
-    _data: 
+    _data:
      { date_start: '2017-01-01',
        date_stop: '2018-05-24',
        impressions: '768',
@@ -2816,7 +2815,7 @@ ads_insights api call complete.
        ad_id: '23842628611570754',
        age: '18-24',
        gender: 'female' },
-    _fields: 
+    _fields:
      [ 'account_currency',
        'account_id',
        'account_name',
@@ -2893,7 +2892,7 @@ ads_insights api call complete.
        'video_p95_watched_actions',
        'website_ctr',
        'website_purchase_roas' ],
-    _changes: 
+    _changes:
      { date_start: '2017-01-01',
        date_stop: '2018-05-24',
        impressions: '768',
@@ -2981,7 +2980,7 @@ ads_insights api call complete.
     website_ctr: [Getter/Setter],
     website_purchase_roas: [Getter/Setter],
     _parentId: undefined,
-    _api: 
+    _api:
      FacebookAdsApi {
        accessToken: 'EAAVZC1d0m01UBAH70PiPhG99WlFUGwZCijQZAKiRfaSryytdRPlZC4GypOMGgyGyUOrDIo5uftZBu9ZBtZCDQvq8QlkxGj5F5lOujRfLawAsM8ZBU4hgECeHbAGFt1lVDfVHoiVF7n6sgIr1jYvXHoAWZCzITLP3I5tUZD',
        locale: 'en_US',
@@ -2989,7 +2988,7 @@ ads_insights api call complete.
     age: [Getter/Setter],
     gender: [Getter/Setter] },
   AdsInsights {
-    _data: 
+    _data:
      { date_start: '2017-01-01',
        date_stop: '2018-05-24',
        impressions: '919',
@@ -3000,7 +2999,7 @@ ads_insights api call complete.
        ad_id: '23842610644290754',
        age: '18-24',
        gender: 'female' },
-    _fields: 
+    _fields:
      [ 'account_currency',
        'account_id',
        'account_name',
@@ -3077,7 +3076,7 @@ ads_insights api call complete.
        'video_p95_watched_actions',
        'website_ctr',
        'website_purchase_roas' ],
-    _changes: 
+    _changes:
      { date_start: '2017-01-01',
        date_stop: '2018-05-24',
        impressions: '919',
@@ -3165,7 +3164,7 @@ ads_insights api call complete.
     website_ctr: [Getter/Setter],
     website_purchase_roas: [Getter/Setter],
     _parentId: undefined,
-    _api: 
+    _api:
      FacebookAdsApi {
        accessToken: 'EAAVZC1d0m01UBAH70PiPhG99WlFUGwZCijQZAKiRfaSryytdRPlZC4GypOMGgyGyUOrDIo5uftZBu9ZBtZCDQvq8QlkxGj5F5lOujRfLawAsM8ZBU4hgECeHbAGFt1lVDfVHoiVF7n6sgIr1jYvXHoAWZCzITLP3I5tUZD',
        locale: 'en_US',
@@ -3173,7 +3172,7 @@ ads_insights api call complete.
     age: [Getter/Setter],
     gender: [Getter/Setter] },
   AdsInsights {
-    _data: 
+    _data:
      { date_start: '2017-01-01',
        date_stop: '2018-05-24',
        impressions: '9324',
@@ -3184,7 +3183,7 @@ ads_insights api call complete.
        ad_id: '23842611864990754',
        age: '18-24',
        gender: 'female' },
-    _fields: 
+    _fields:
      [ 'account_currency',
        'account_id',
        'account_name',
@@ -3261,7 +3260,7 @@ ads_insights api call complete.
        'video_p95_watched_actions',
        'website_ctr',
        'website_purchase_roas' ],
-    _changes: 
+    _changes:
      { date_start: '2017-01-01',
        date_stop: '2018-05-24',
        impressions: '9324',
@@ -3349,7 +3348,7 @@ ads_insights api call complete.
     website_ctr: [Getter/Setter],
     website_purchase_roas: [Getter/Setter],
     _parentId: undefined,
-    _api: 
+    _api:
      FacebookAdsApi {
        accessToken: 'EAAVZC1d0m01UBAH70PiPhG99WlFUGwZCijQZAKiRfaSryytdRPlZC4GypOMGgyGyUOrDIo5uftZBu9ZBtZCDQvq8QlkxGj5F5lOujRfLawAsM8ZBU4hgECeHbAGFt1lVDfVHoiVF7n6sgIr1jYvXHoAWZCzITLP3I5tUZD',
        locale: 'en_US',
@@ -3357,7 +3356,7 @@ ads_insights api call complete.
     age: [Getter/Setter],
     gender: [Getter/Setter] },
   AdsInsights {
-    _data: 
+    _data:
      { date_start: '2017-01-01',
        date_stop: '2018-05-24',
        impressions: '101609',
@@ -3368,7 +3367,7 @@ ads_insights api call complete.
        ad_id: '23842568067150754',
        age: '18-24',
        gender: 'female' },
-    _fields: 
+    _fields:
      [ 'account_currency',
        'account_id',
        'account_name',
@@ -3445,7 +3444,7 @@ ads_insights api call complete.
        'video_p95_watched_actions',
        'website_ctr',
        'website_purchase_roas' ],
-    _changes: 
+    _changes:
      { date_start: '2017-01-01',
        date_stop: '2018-05-24',
        impressions: '101609',
@@ -3533,7 +3532,7 @@ ads_insights api call complete.
     website_ctr: [Getter/Setter],
     website_purchase_roas: [Getter/Setter],
     _parentId: undefined,
-    _api: 
+    _api:
      FacebookAdsApi {
        accessToken: 'EAAVZC1d0m01UBAH70PiPhG99WlFUGwZCijQZAKiRfaSryytdRPlZC4GypOMGgyGyUOrDIo5uftZBu9ZBtZCDQvq8QlkxGj5F5lOujRfLawAsM8ZBU4hgECeHbAGFt1lVDfVHoiVF7n6sgIr1jYvXHoAWZCzITLP3I5tUZD',
        locale: 'en_US',
@@ -3541,7 +3540,7 @@ ads_insights api call complete.
     age: [Getter/Setter],
     gender: [Getter/Setter] },
   AdsInsights {
-    _data: 
+    _data:
      { date_start: '2017-01-01',
        date_stop: '2018-05-24',
        impressions: '731',
@@ -3552,7 +3551,7 @@ ads_insights api call complete.
        ad_id: '23842612415660754',
        age: '18-24',
        gender: 'female' },
-    _fields: 
+    _fields:
      [ 'account_currency',
        'account_id',
        'account_name',
@@ -3629,7 +3628,7 @@ ads_insights api call complete.
        'video_p95_watched_actions',
        'website_ctr',
        'website_purchase_roas' ],
-    _changes: 
+    _changes:
      { date_start: '2017-01-01',
        date_stop: '2018-05-24',
        impressions: '731',
@@ -3717,7 +3716,7 @@ ads_insights api call complete.
     website_ctr: [Getter/Setter],
     website_purchase_roas: [Getter/Setter],
     _parentId: undefined,
-    _api: 
+    _api:
      FacebookAdsApi {
        accessToken: 'EAAVZC1d0m01UBAH70PiPhG99WlFUGwZCijQZAKiRfaSryytdRPlZC4GypOMGgyGyUOrDIo5uftZBu9ZBtZCDQvq8QlkxGj5F5lOujRfLawAsM8ZBU4hgECeHbAGFt1lVDfVHoiVF7n6sgIr1jYvXHoAWZCzITLP3I5tUZD',
        locale: 'en_US',
@@ -3725,7 +3724,7 @@ ads_insights api call complete.
     age: [Getter/Setter],
     gender: [Getter/Setter] },
   AdsInsights {
-    _data: 
+    _data:
      { date_start: '2017-01-01',
        date_stop: '2018-05-24',
        impressions: '71227',
@@ -3736,7 +3735,7 @@ ads_insights api call complete.
        ad_id: '23842578621800754',
        age: '18-24',
        gender: 'female' },
-    _fields: 
+    _fields:
      [ 'account_currency',
        'account_id',
        'account_name',
@@ -3813,7 +3812,7 @@ ads_insights api call complete.
        'video_p95_watched_actions',
        'website_ctr',
        'website_purchase_roas' ],
-    _changes: 
+    _changes:
      { date_start: '2017-01-01',
        date_stop: '2018-05-24',
        impressions: '71227',
@@ -3901,7 +3900,7 @@ ads_insights api call complete.
     website_ctr: [Getter/Setter],
     website_purchase_roas: [Getter/Setter],
     _parentId: undefined,
-    _api: 
+    _api:
      FacebookAdsApi {
        accessToken: 'EAAVZC1d0m01UBAH70PiPhG99WlFUGwZCijQZAKiRfaSryytdRPlZC4GypOMGgyGyUOrDIo5uftZBu9ZBtZCDQvq8QlkxGj5F5lOujRfLawAsM8ZBU4hgECeHbAGFt1lVDfVHoiVF7n6sgIr1jYvXHoAWZCzITLP3I5tUZD',
        locale: 'en_US',
@@ -3909,7 +3908,7 @@ ads_insights api call complete.
     age: [Getter/Setter],
     gender: [Getter/Setter] },
   AdsInsights {
-    _data: 
+    _data:
      { date_start: '2017-01-01',
        date_stop: '2018-05-24',
        impressions: '1',
@@ -3920,7 +3919,7 @@ ads_insights api call complete.
        ad_id: '23842628614840754',
        age: '18-24',
        gender: 'female' },
-    _fields: 
+    _fields:
      [ 'account_currency',
        'account_id',
        'account_name',
@@ -3997,7 +3996,7 @@ ads_insights api call complete.
        'video_p95_watched_actions',
        'website_ctr',
        'website_purchase_roas' ],
-    _changes: 
+    _changes:
      { date_start: '2017-01-01',
        date_stop: '2018-05-24',
        impressions: '1',
@@ -4085,7 +4084,7 @@ ads_insights api call complete.
     website_ctr: [Getter/Setter],
     website_purchase_roas: [Getter/Setter],
     _parentId: undefined,
-    _api: 
+    _api:
      FacebookAdsApi {
        accessToken: 'EAAVZC1d0m01UBAH70PiPhG99WlFUGwZCijQZAKiRfaSryytdRPlZC4GypOMGgyGyUOrDIo5uftZBu9ZBtZCDQvq8QlkxGj5F5lOujRfLawAsM8ZBU4hgECeHbAGFt1lVDfVHoiVF7n6sgIr1jYvXHoAWZCzITLP3I5tUZD',
        locale: 'en_US',
@@ -4093,7 +4092,7 @@ ads_insights api call complete.
     age: [Getter/Setter],
     gender: [Getter/Setter] },
   AdsInsights {
-    _data: 
+    _data:
      { date_start: '2017-01-01',
        date_stop: '2018-05-24',
        impressions: '2149',
@@ -4104,7 +4103,7 @@ ads_insights api call complete.
        ad_id: '23842651964660754',
        age: '18-24',
        gender: 'female' },
-    _fields: 
+    _fields:
      [ 'account_currency',
        'account_id',
        'account_name',
@@ -4181,7 +4180,7 @@ ads_insights api call complete.
        'video_p95_watched_actions',
        'website_ctr',
        'website_purchase_roas' ],
-    _changes: 
+    _changes:
      { date_start: '2017-01-01',
        date_stop: '2018-05-24',
        impressions: '2149',
@@ -4269,7 +4268,7 @@ ads_insights api call complete.
     website_ctr: [Getter/Setter],
     website_purchase_roas: [Getter/Setter],
     _parentId: undefined,
-    _api: 
+    _api:
      FacebookAdsApi {
        accessToken: 'EAAVZC1d0m01UBAH70PiPhG99WlFUGwZCijQZAKiRfaSryytdRPlZC4GypOMGgyGyUOrDIo5uftZBu9ZBtZCDQvq8QlkxGj5F5lOujRfLawAsM8ZBU4hgECeHbAGFt1lVDfVHoiVF7n6sgIr1jYvXHoAWZCzITLP3I5tUZD',
        locale: 'en_US',
@@ -4277,7 +4276,7 @@ ads_insights api call complete.
     age: [Getter/Setter],
     gender: [Getter/Setter] },
   AdsInsights {
-    _data: 
+    _data:
      { date_start: '2017-01-01',
        date_stop: '2018-05-24',
        impressions: '4827',
@@ -4288,7 +4287,7 @@ ads_insights api call complete.
        ad_id: '23842568547320754',
        age: '18-24',
        gender: 'female' },
-    _fields: 
+    _fields:
      [ 'account_currency',
        'account_id',
        'account_name',
@@ -4365,7 +4364,7 @@ ads_insights api call complete.
        'video_p95_watched_actions',
        'website_ctr',
        'website_purchase_roas' ],
-    _changes: 
+    _changes:
      { date_start: '2017-01-01',
        date_stop: '2018-05-24',
        impressions: '4827',
@@ -4453,7 +4452,7 @@ ads_insights api call complete.
     website_ctr: [Getter/Setter],
     website_purchase_roas: [Getter/Setter],
     _parentId: undefined,
-    _api: 
+    _api:
      FacebookAdsApi {
        accessToken: 'EAAVZC1d0m01UBAH70PiPhG99WlFUGwZCijQZAKiRfaSryytdRPlZC4GypOMGgyGyUOrDIo5uftZBu9ZBtZCDQvq8QlkxGj5F5lOujRfLawAsM8ZBU4hgECeHbAGFt1lVDfVHoiVF7n6sgIr1jYvXHoAWZCzITLP3I5tUZD',
        locale: 'en_US',
@@ -4461,7 +4460,7 @@ ads_insights api call complete.
     age: [Getter/Setter],
     gender: [Getter/Setter] },
   AdsInsights {
-    _data: 
+    _data:
      { date_start: '2017-01-01',
        date_stop: '2018-05-24',
        impressions: '9906',
@@ -4472,7 +4471,7 @@ ads_insights api call complete.
        ad_id: '23842628610160754',
        age: '18-24',
        gender: 'female' },
-    _fields: 
+    _fields:
      [ 'account_currency',
        'account_id',
        'account_name',
@@ -4549,7 +4548,7 @@ ads_insights api call complete.
        'video_p95_watched_actions',
        'website_ctr',
        'website_purchase_roas' ],
-    _changes: 
+    _changes:
      { date_start: '2017-01-01',
        date_stop: '2018-05-24',
        impressions: '9906',
@@ -4637,7 +4636,7 @@ ads_insights api call complete.
     website_ctr: [Getter/Setter],
     website_purchase_roas: [Getter/Setter],
     _parentId: undefined,
-    _api: 
+    _api:
      FacebookAdsApi {
        accessToken: 'EAAVZC1d0m01UBAH70PiPhG99WlFUGwZCijQZAKiRfaSryytdRPlZC4GypOMGgyGyUOrDIo5uftZBu9ZBtZCDQvq8QlkxGj5F5lOujRfLawAsM8ZBU4hgECeHbAGFt1lVDfVHoiVF7n6sgIr1jYvXHoAWZCzITLP3I5tUZD',
        locale: 'en_US',

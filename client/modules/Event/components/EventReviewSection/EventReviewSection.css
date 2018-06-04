@@ -1,0 +1,14 @@
+.event-review-section {
+  padding: 2rem 0 1rem;
+  border-bottom: 1px solid #eee;
+  width: 100%;
+}
+
+.event-review-section__field-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.event-review-section__total {
+  font-size: 1.6rem;
+}

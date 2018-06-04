@@ -5,16 +5,20 @@ const eventSchema = new Schema({
   name: { type: 'String', required: true },
   type: { type: 'String' },
   cuid: { type: 'String', required: true },
+  uid: { type: 'String', required: true },
   dateLastUpdated: { type: 'Date', default: Date.now, required: true },
   time: { type: 'Date', required: true },
   tags: { type: ['String'], default: [] },
   revenue: {
-    // Abstract this??
-    // Have this as a separate model
-    // Key, value, subfields array, revenue/expenditure
-    // Argument against: harder to do default reporting. I like this better. Maybe add Rev/Exp though.
+    /*
+      TODO:
+      Refactor this so that *every* subsection is like the "other" subsections.
+      Then, initialize each event to have the default subsections and fields displayed here.
+      This way, all sections / subsections / fields conform to the same pattern.
+      Also: add more properties to the field object.
+    */
     barRevenue: {
-      _total: { type: 'Number', default: 0 },
+      _total: { type: 'Number', default: 0 }, // Do we need to make these fields more complex structures? e.g. data format, source, etc.
       beer: { type: 'Number', default: 0 },
       wine: { type: 'Number', default: 0 },
       liquor: { type: 'Number', default: 0 },

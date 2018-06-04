@@ -31,5 +31,29 @@ export default (
         });
       }}
     />
+    <Route
+      path="/events"
+      getComponent={(nextState, cb) => {
+        require.ensure([], require => {
+          cb(null, require('./modules/Event/pages/EventListPage/EventListPage').default);
+        });
+      }}
+    />
+    <Route
+      path="/events/:cuid"
+      getComponent={(nextState, cb) => {
+        require.ensure([], require => {
+          cb(null, require('./modules/Event/pages/EventDetailPage/EventDetailPage').default);
+        });
+      }}
+    />
+    <Route
+      path="/events/:cuid/review"
+      getComponent={(nextState, cb) => {
+        require.ensure([], require => {
+          cb(null, require('./modules/Event/pages/EventReviewPage/EventReviewPage').default);
+        });
+      }}
+    />
   </Route>
 );

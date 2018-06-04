@@ -80,8 +80,10 @@ export class App extends Component {
           <Header />
           <div className={styles.container}>
             <Sidebar />
-            <div>
-              {this.props.children}
+            <div style={{ flex: 1, padding: '2rem' }}>
+              <div style={{ maxWidth: '980px' }}>
+                {this.props.children}
+              </div>
             </div>
           </div>
           <Footer />
@@ -94,13 +96,11 @@ export class App extends Component {
 App.propTypes = {
   children: PropTypes.object.isRequired,
   dispatch: PropTypes.func.isRequired,
-  intl: PropTypes.object.isRequired,
 };
 
 // Retrieve data from store as props
 function mapStateToProps(store) {
   return {
-    intl: store.intl,
   };
 }
 
