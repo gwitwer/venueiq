@@ -7,7 +7,8 @@ const eventSchema = new Schema({
   cuid: { type: 'String', required: true },
   dateLastUpdated: { type: 'Date', default: Date.now, required: true },
   time: { type: 'Date', required: true },
-  data: {
+  tags: { type: ['String'], default: [] },
+  revenue: {
     // Abstract this??
     // Have this as a separate model
     // Key, value, subfields array, revenue/expenditure
@@ -20,7 +21,6 @@ const eventSchema = new Schema({
     },
     grossedAtDoor: {
       _total: { type: 'Number', default: 0 },
-      _group: 'rev',
       preShowTickets: { type: 'Number', default: 0 },
       dayOfShow: { type: 'Number', default: 0 },
     },
@@ -31,6 +31,8 @@ const eventSchema = new Schema({
         value: { type: 'Number', default: 0 },
       }],
     },
+  },
+  expenditure: {
     costOfTalent: {
       _total: { type: 'Number', default: 0 },
       cashGuarantee: { type: 'Number', default: 0 },

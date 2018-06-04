@@ -13,6 +13,8 @@ const userSchema = new Schema({
   fb_adaccount: { type: 'String' },
   fb_business: { type: 'String' },
   misc: { type: Schema.Types.Mixed },
+  savedRevenues: { type: ['String'], default: [] },
+  savedExpenditures: { type: ['String'], default: [] },
 });
 
 export default mongoose.model('User', userSchema);
