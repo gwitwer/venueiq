@@ -1,4 +1,4 @@
-import { ADD_EVENT, ADD_EVENTS, DELETE_EVENT } from './EventActions';
+import { ADD_EVENT, ADD_EVENTS, DELETE_EVENT, UPDATE_EVENT } from './EventActions';
 
 // Initial State
 const initialState = { data: [] };
@@ -13,6 +13,17 @@ const EventReducer = (state = initialState, action) => {
     case ADD_EVENTS :
       return {
         data: action.events,
+      };
+
+    case UPDATE_EVENT :
+      return {
+        data: state.data.map(event => {
+          if (event.cuid === action.event.cuid) {
+            return action.event;
+          } else {
+            return event;
+          }
+        }),
       };
 
     case DELETE_EVENT :

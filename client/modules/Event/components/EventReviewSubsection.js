@@ -8,34 +8,35 @@ class EventReviewSubsection extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      editing: false,
       expanded: false,
     };
   }
 
-  expand = () => {
+  expand = e => {
+    e.preventDefault();
     this.setState({
       expanded: !this.state.expanded,
     });
   }
 
   render() {
-
     const {
       subsectionMap,
       subsectionTotal,
       eventData,
+      // State of value is either display or editing (editing: true/false)
+      // When we are editing, we provide a function onValueChange and onValueSave
     } = this.props;
-
-    console.log(subsectionMap)
 
     return (
       <div>
-        <div className={styles['event-review-section__field-row']}>
+        <div onClick={this.expand} className={styles['event-review-section__field-row']}>
           <div>
-            <span onClick={this.expand}>{this.state.expanded ? '-' : '+'}</span>
+            <span>{this.state.expanded ? '-' : '+'}</span>
             {subsectionMap.title}
           </div>
-          <div>{subsectionMap.display(subsectionTotal)}</div>
+          <div onClick={handleFieldClick}>{subsectionMap.display(subsectionTotal)}</div>
         </div>
         {this.state.expanded
           ? (Object.keys(subsectionMap.fields).map(field => (

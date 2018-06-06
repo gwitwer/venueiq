@@ -16,6 +16,13 @@ const eventSchema = new Schema({
       Then, initialize each event to have the default subsections and fields displayed here.
       This way, all sections / subsections / fields conform to the same pattern.
       Also: add more properties to the field object.
+
+      NOTE:
+      What happens when we need to calculate relationships between the dynamic fields?
+      How would we reference them when, theoretically, they might not exist?
+      Perhaps we could set a "default" value for these fields that include the base ones.
+      Then we can assume that these fields exist.
+      (Update: we can't.)
     */
     barRevenue: {
       _total: { type: 'Number', default: 0 }, // Do we need to make these fields more complex structures? e.g. data format, source, etc.

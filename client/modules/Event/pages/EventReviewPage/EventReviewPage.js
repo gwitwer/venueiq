@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import Helmet from 'react-helmet';
+import slugify from 'slugify';
 
 // Import Style
 import styles from './EventReviewPage.css';
@@ -9,7 +10,7 @@ import styles from './EventReviewPage.css';
 import EventReviewSection from '../../components/EventReviewSection/EventReviewSection';
 
 // Import Actions
-import { fetchEvent } from '../../EventActions';
+import { fetchEvent, updateEventRequest } from '../../EventActions';
 
 // Import Selectors
 import { getEvent } from '../../EventReducer';
@@ -46,11 +47,43 @@ const getTotals = (event, dataMap) => {
   return totals;
 };
 
+const handleValueUpdate = dispatch => event => section => subsection => field => value => {
+  if (field) {
+    if (subsection) {
+      if (section && event && dispatch) {
+        // We are dealing with a field update.
+        // Update section.subsection.field.value or find the [fields] key.
+        if (event[section][subsection].fields) {
+          const fieldsUpdate = event[section][subsection].fields.map(eventField => {
+            if (slugify(eventField.key) === field) {
+              return {
+                ...eventField,
+                value,
+              };
+            }
+            return eventField;
+          });
+
+          const update = { $set: {  } };
+          update['$set'][`${section}.${subsection}.fields`] = fieldsUpdate;
+        }
+      } else {
+        console.log('Section and event are required');
+      }
+    } else {
+      // We are dealing with a section update.
+      // Update section._total
+    }
+  } else {
+    // We are dealing with a subsection update.
+    // Update section.subsection._total
+  }
+}
 // TODO: have a "handleValueChange" function that takes the section, subsection, and field.
 // The subsection and field are optional.
 // Partially-called function is passed from parent to child component based on the mapping.
 
-export function EventReviewPage({ event }) {
+export function EventReviewPage({ event, dispatch }) {
   const DM = eventDataMap(event);
   const totals = getTotals(event, DM);
   return (
@@ -88,6 +121,7 @@ function mapStateToProps(state, props) {
 
 EventReviewPage.propTypes = {
   event: PropTypes.object.isRequired,
+  dispatch: PropTypes.func.isRequired,
 };
 
 export default connect(mapStateToProps)(EventReviewPage);
