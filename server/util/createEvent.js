@@ -1,6 +1,6 @@
 import Event from '../models/event';
 import slugify from 'slugify';
-import { data } from './defaultEventData';
+import defaultEventData from './defaultEventData';
 import cuid from 'cuid';
 
 const createEvent = ({
@@ -10,6 +10,8 @@ const createEvent = ({
   dateLastUpdated,
   time,
   tags,
+  data,
+  defaultCuid,
 }) => (new Event({
   name,
   type,
@@ -17,6 +19,8 @@ const createEvent = ({
   dateLastUpdated,
   time,
   tags,
-  cuid,
-  data,
-}));
+  data: data ? data : defaultEventData.data,
+  cuid: defaultCuid ? defaultCuid : cuid(),
+})).save();
+
+export default createEvent;

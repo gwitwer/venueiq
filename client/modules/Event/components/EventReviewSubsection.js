@@ -4,6 +4,8 @@ import slugify from 'slugify';
 // Import Styles
 import styles from './EventReviewSection/EventReviewSection.css';
 
+import eventValueDisplays from '../util/eventValueDisplays';
+
 class EventReviewSubsection extends Component {
   constructor(props) {
     super(props);
@@ -22,9 +24,8 @@ class EventReviewSubsection extends Component {
 
   render() {
     const {
-      subsectionMap,
       subsectionTotal,
-      eventData,
+      subsection,
       // State of value is either display or editing (editing: true/false)
       // When we are editing, we provide a function onValueChange and onValueSave
     } = this.props;
@@ -34,26 +35,18 @@ class EventReviewSubsection extends Component {
         <div onClick={this.expand} className={styles['event-review-section__field-row']}>
           <div>
             <span>{this.state.expanded ? '-' : '+'}</span>
-            {subsectionMap.title}
+            {subsection.name}
           </div>
-          <div onClick={handleFieldClick}>{subsectionMap.display(subsectionTotal)}</div>
+          <div>{eventValueDisplays[subsection.display](subsectionTotal)}</div>
         </div>
         {this.state.expanded
-          ? (Object.keys(subsectionMap.fields).map(field => (
-            <div key={field} className={styles['event-review-section__field-row']}>
+          ? (subsection.fields.map(field => (
+            <div key={field.slug} className={styles['event-review-section__field-row']}>
               <div>
-                {subsectionMap.fields[field].title}
+                {field.name}
               </div>
               <div>
-                {
-                  eventData.fields
-                    ? (
-                      subsectionMap.fields[field].display(
-                        eventData.fields.filter(f => slugify(f.key) === field)[0].value
-                      )
-                    )
-                    : subsectionMap.fields[field].display(eventData[field])
-                }
+                {eventValueDisplays[field.display](field.value)}
               </div>
             </div>
           )))

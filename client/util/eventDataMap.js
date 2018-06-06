@@ -1,3 +1,4 @@
+// TODO: delete this file
 import { eye } from './functional';
 const slugify = require('slugify');
 const usd = n => n.toLocaleString('en-US', {style: 'currency', currency:'USD'});

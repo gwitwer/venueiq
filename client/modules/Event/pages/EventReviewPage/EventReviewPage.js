@@ -15,33 +15,24 @@ import { fetchEvent, updateEventRequest } from '../../EventActions';
 // Import Selectors
 import { getEvent } from '../../EventReducer';
 
-// Import Utils
-import eventDataMap from '../../../../util/eventDataMap';
-
-const getTotals = (event, dataMap) => {
+const getTotals = event => {
   const totals = {};
-  Object.keys(dataMap).forEach(section => {
-    totals[section] = {
+  event.data.forEach(section => {
+    totals[section.slug] = {
       total: 0,
     };
-    Object.keys(dataMap[section].fields).forEach(subsection => {
-      totals[section][subsection] = 0;
-      if (event[section][subsection]._total) {
-        totals[section][subsection] = event[section][subsection]._total;
-      } else {
-        if (event[section][subsection].fields) {
-          event[section][subsection].fields.forEach(field => {
-            totals[section][subsection] += field.value;
-          });
-        } else {
-          Object.keys(event[section][subsection]).forEach(field => {
-            totals[section][subsection] += event[section][subsection][field];
-          });
-        }
+    section.fields.forEach(subsection => {
+      totals[section.slug][subsection.slug] = subsection.value;
+
+      // Subsection total can either be manually set or come from the sum of fields.
+      if (!totals[section.slug][subsection.slug]) {
+        subsection.fields.forEach(field => {
+          totals[section.slug][subsection.slug] += field.value;
+        });
       }
 
-      // Add subtotal to overall total
-      totals[section].total += totals[section][subsection];
+      // Add subvalue to overall total
+      totals[section.slug].total += totals[section.slug][subsection.slug];
     });
   });
   return totals;
@@ -52,31 +43,28 @@ const handleValueUpdate = dispatch => event => section => subsection => field =>
     if (subsection) {
       if (section && event && dispatch) {
         // We are dealing with a field update.
-        // Update section.subsection.field.value or find the [fields] key.
-        if (event[section][subsection].fields) {
-          const fieldsUpdate = event[section][subsection].fields.map(eventField => {
-            if (slugify(eventField.key) === field) {
-              return {
-                ...eventField,
-                value,
-              };
-            }
-            return eventField;
-          });
+        const fieldsUpdate = event[section][subsection].fields.map(eventField => {
+          if (slugify(eventField.key) === field) {
+            return {
+              ...eventField,
+              value,
+            };
+          }
+          return eventField;
+        });
 
-          const update = { $set: {  } };
-          update['$set'][`${section}.${subsection}.fields`] = fieldsUpdate;
-        }
+        const update = { $set: {  } };
+        update['$set'][`${section}.${subsection}.fields`] = fieldsUpdate;
       } else {
         console.log('Section and event are required');
       }
     } else {
       // We are dealing with a section update.
-      // Update section._total
+      // Update section.value
     }
   } else {
     // We are dealing with a subsection update.
-    // Update section.subsection._total
+    // Update section.subsection.value
   }
 }
 // TODO: have a "handleValueChange" function that takes the section, subsection, and field.
@@ -84,8 +72,7 @@ const handleValueUpdate = dispatch => event => section => subsection => field =>
 // Partially-called function is passed from parent to child component based on the mapping.
 
 export function EventReviewPage({ event, dispatch }) {
-  const DM = eventDataMap(event);
-  const totals = getTotals(event, DM);
+  const totals = getTotals(event);
   return (
     <div>
       <Helmet title={`${event.name} - Review`} />
@@ -93,12 +80,11 @@ export function EventReviewPage({ event, dispatch }) {
         <h3 className={styles['event-title']}>{event.name}</h3>
         <h4>Review</h4>
         <div>
-          {Object.keys(DM).map(section => (
+          {event.data.map(section => (
             <EventReviewSection
-              eventData={event[section]}
-              dataMap={DM[section]}
-              sectionTotals={totals[section]}
-              key={section}
+              section={section}
+              sectionTotals={totals[section.slug]}
+              key={section.slug}
             />
           ))}
         </div>

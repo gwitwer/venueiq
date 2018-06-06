@@ -9,67 +9,25 @@ const eventSchema = new Schema({
   dateLastUpdated: { type: 'Date', default: Date.now, required: true },
   time: { type: 'Date', required: true },
   tags: { type: ['String'], default: [] },
-  revenue: {
-    /*
-      TODO:
-      Refactor this so that *every* subsection is like the "other" subsections.
-      Then, initialize each event to have the default subsections and fields displayed here.
-      This way, all sections / subsections / fields conform to the same pattern.
-      Also: add more properties to the field object.
-
-      NOTE:
-      What happens when we need to calculate relationships between the dynamic fields?
-      How would we reference them when, theoretically, they might not exist?
-      Perhaps we could set a "default" value for these fields that include the base ones.
-      Then we can assume that these fields exist.
-      (Update: we can't.)
-    */
-    barRevenue: {
-      _total: { type: 'Number', default: 0 }, // Do we need to make these fields more complex structures? e.g. data format, source, etc.
-      beer: { type: 'Number', default: 0 },
-      wine: { type: 'Number', default: 0 },
-      liquor: { type: 'Number', default: 0 },
-    },
-    grossedAtDoor: {
-      _total: { type: 'Number', default: 0 },
-      preShowTickets: { type: 'Number', default: 0 },
-      dayOfShow: { type: 'Number', default: 0 },
-    },
-    otherRevenue: {
-      _total: { type: 'Number', default: 0 },
+  data: [{
+    name: { type: 'String' },
+    slug: { type: 'String' },
+    display: { type: 'String' },
+    value: { type: 'Number' },
+    fields: [{
+      name: { type: 'String' },
+      slug: { type: 'String' },
+      display: { type: 'String' },
+      value: { type: 'Number' }, // for something like genre, the display function would map number to genre.
       fields: [{
-        key: { type: 'String' },
-        value: { type: 'Number', default: 0 },
+        name: { type: 'String' },
+        slug: { type: 'String' },
+        display: { type: 'String' },
+        value: { type: 'Number' },
+        source: { type: 'String' }, // Where the data came from.
       }],
-    },
-  },
-  expenditure: {
-    costOfTalent: {
-      _total: { type: 'Number', default: 0 },
-      cashGuarantee: { type: 'Number', default: 0 },
-      fromTickets: { type: 'Number', default: 0 },
-    },
-    staffingCosts: {
-      _total: { type: 'Number', default: 0 },
-      security: { type: 'Number', default: 0 },
-      sound: { type: 'Number', default: 0 },
-      bar: { type: 'Number', default: 0 },
-      promotional: { type: 'Number', default: 0 },
-    },
-    promotionalSpending: {
-      _total: { type: 'Number', default: 0 },
-      physical: { type: 'Number', default: 0 },
-      social: { type: 'Number', default: 0 },
-      local: { type: 'Number', default: 0 },
-    },
-    otherExpenditure: {
-      _total: { type: 'Number', default: 0 },
-      fields: [{
-        key: { type: 'String' },
-        value: { type: 'Number', default: 0 },
-      }],
-    }
-  }
+    }],
+  }],
 });
 
 export default mongoose.model('Event', eventSchema);
