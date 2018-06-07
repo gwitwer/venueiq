@@ -38,38 +38,35 @@ const getTotals = event => {
   return totals;
 };
 
-const handleValueUpdate = dispatch => event => section => subsection => field => value => {
-  if (field) {
-    if (subsection) {
-      if (section && event && dispatch) {
-        // We are dealing with a field update.
-        const fieldsUpdate = event[section][subsection].fields.map(eventField => {
-          if (slugify(eventField.key) === field) {
-            return {
-              ...eventField,
-              value,
-            };
-          }
-          return eventField;
-        });
+const updateField = dispatch => event => slug => value => {
+  // Deep copy the object to replace in the document.
+  const copiedData = JSON.parse(JSON.stringify(event.data));
 
-        const update = { $set: {  } };
-        update['$set'][`${section}.${subsection}.fields`] = fieldsUpdate;
+  // We need to first search for the field
+  for (let i = 0; i < copiedData.length; i++) {
+    let found = false;
+    for (let j = 0; j < copiedData[i].fields.length; j++) {
+      // Check if it is a subsection value change
+      if (copiedData[i].fields[j].slug === slug) {
+        found = true;
+        copiedData[i].fields[j].value = value;
+        break;
       } else {
-        console.log('Section and event are required');
+        // Otherwise, check all the subsection fields.
+        for (let k = 0; k < copiedData[i].fields[j].fields.length; k++) {
+          if (copiedData[i].fields[j].fields[k].slug === slug) {
+            found = true;
+            copiedData[i].fields[j].fields[k].value = value;
+            break;
+          }
+        }
       }
-    } else {
-      // We are dealing with a section update.
-      // Update section.value
+      if (found) break; // Break if we found it
     }
-  } else {
-    // We are dealing with a subsection update.
-    // Update section.subsection.value
+    if (found) break; // Break if we found it
   }
-}
-// TODO: have a "handleValueChange" function that takes the section, subsection, and field.
-// The subsection and field are optional.
-// Partially-called function is passed from parent to child component based on the mapping.
+  updateEventRequest(event.cuid, { $set: { data: copiedData } })(dispatch);
+};
 
 export function EventReviewPage({ event, dispatch }) {
   const totals = getTotals(event);
@@ -85,6 +82,7 @@ export function EventReviewPage({ event, dispatch }) {
               section={section}
               sectionTotals={totals[section.slug]}
               key={section.slug}
+              updateField={updateField(dispatch)(event)}
             />
           ))}
         </div>

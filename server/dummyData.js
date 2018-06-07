@@ -5,7 +5,7 @@ import createEvent from './util/createEvent';
 
 export default function() {
   // const eventCount = Event.count().exec();
-  const removeEvents = Event.remove({}).exec();
+  const removeEvents = Event.remove({ cuid: '15' }).exec();
   removeEvents.then(() => {
     if (true) {
       const event1 = createEvent({
@@ -73,6 +73,7 @@ export default function() {
                 name: 'Other Revenue',
                 slug: slugify('Other Revenue'),
                 value: 0,
+                canAdd: true,
                 display: 'usd',
                 fields: [],
               },
@@ -166,6 +167,7 @@ export default function() {
                 name: 'Other Expenditure',
                 slug: slugify('Other Expenditure'),
                 value: 0,
+                canAdd: true,
                 display: 'usd',
                 fields: [],
               },
@@ -273,6 +275,7 @@ export default function() {
                 name: 'Other Revenue',
                 slug: slugify('Other Revenue'),
                 value: 0,
+                canAdd: true,
                 display: 'usd',
                 fields: [],
               },
@@ -366,6 +369,7 @@ export default function() {
                 name: 'Other Expenditure',
                 slug: slugify('Other Expenditure'),
                 value: 0,
+                canAdd: true,
                 display: 'usd',
                 fields: [],
               },
@@ -473,6 +477,7 @@ export default function() {
                 name: 'Other Revenue',
                 slug: slugify('Other Revenue'),
                 value: 0,
+                canAdd: true,
                 display: 'usd',
                 fields: [],
               },
@@ -566,6 +571,7 @@ export default function() {
                 name: 'Other Expenditure',
                 slug: slugify('Other Expenditure'),
                 value: 0,
+                canAdd: true,
                 display: 'usd',
                 fields: [],
               },

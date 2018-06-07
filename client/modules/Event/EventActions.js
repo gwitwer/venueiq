@@ -27,9 +27,9 @@ export function updateEvent(event) {
   };
 }
 
-export function updateEventRequest(update) {
+export function updateEventRequest(cuid, update) {
   return dispatch => {
-    return callApi('events', 'post', { update }).then(res => dispatch(updateEvent(res.event)));
+    return callApi(`events/${cuid}`, 'post', { update }).then(res => dispatch(updateEvent(res.event)));
   };
 }
 

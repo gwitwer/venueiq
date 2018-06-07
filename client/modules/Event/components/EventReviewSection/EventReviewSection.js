@@ -11,9 +11,10 @@ import eventValueDisplays from '../../util/eventValueDisplays';
 const EventReviewSection = ({
   section,
   sectionTotals,
+  updateField,
 }) => (
-  <div className={styles['event-review-section']}>
-    <div className={`${styles['event-review-section__total']} ${styles['event-review-section__field-row']}`}>
+  <div className={styles['event-review']}>
+    <div className={`${styles['event-review__total']} ${styles['event-review__field-row']}`}>
       <div>{section.name}</div>
       <div>{eventValueDisplays[section.display](sectionTotals.total)}</div>
     </div>
@@ -23,6 +24,7 @@ const EventReviewSection = ({
           key={subsection.slug}
           subsectionTotal={sectionTotals[subsection.slug]}
           subsection={subsection}
+          updateField={updateField}
         />
       ))}
     </div>

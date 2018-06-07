@@ -18,6 +18,7 @@ const eventSchema = new Schema({
       name: { type: 'String' },
       slug: { type: 'String' },
       display: { type: 'String' },
+      canAdd: { type: 'Boolean' },
       value: { type: 'Number' }, // for something like genre, the display function would map number to genre.
       fields: [{
         name: { type: 'String' },
