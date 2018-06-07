@@ -15,7 +15,7 @@ const EventReducer = (state = initialState, action) => {
         data: action.events,
       };
 
-    case UPDATE_EVENT :
+    case UPDATE_EVENT: {
       const index = state.data.findIndex(e => e.cuid === action.event.cuid);
       return {
         data: [
@@ -24,7 +24,7 @@ const EventReducer = (state = initialState, action) => {
           ...state.data.slice(index + 1),
         ],
       };
-
+    }
     case DELETE_EVENT :
       return {
         data: state.data.filter(event => event.cuid !== action.cuid),

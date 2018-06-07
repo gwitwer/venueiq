@@ -1,11 +1,10 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router';
 
 // Import Style
 // import styles from './Overview.css';
 
-export function Overview(props) {
+export function Overview() {
   return (
     <div>
       <h1>Overview</h1>
@@ -18,7 +17,7 @@ Overview.need = [
 ];
 
 // Retrieve data from store as props
-function mapStateToProps(state, props) {
+function mapStateToProps() {
   return {};
 }
 

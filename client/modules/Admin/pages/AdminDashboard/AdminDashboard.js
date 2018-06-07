@@ -19,7 +19,7 @@ class AdminDashboard extends Component {
       this.context.router.push('/');
     }
   }
-  
+
   render() {
     return (
       <div>

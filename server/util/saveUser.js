@@ -5,8 +5,8 @@ const saveUser = user => {
     'email',
   ];
   const save = {};
-  fields.forEach(f => { save[f] = user[f] });
+  fields.forEach(f => { save[f] = user[f]; });
   return save;
-}
+};
 
 export default saveUser;

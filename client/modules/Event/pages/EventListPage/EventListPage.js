@@ -44,6 +44,7 @@ function mapStateToProps(state) {
 
 EventListPage.propTypes = {
   events: PropTypes.arrayOf(PropTypes.object).isRequired,
+  dispatch: PropTypes.func.isRequired,
 };
 
 EventListPage.contextTypes = {

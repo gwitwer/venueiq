@@ -35,7 +35,7 @@ export function getEvent(req, res) {
  */
 export function updateEvent(req, res) {
   const { cuid } = req.params;
-  Event.findOneAndUpdate({ cuid }, req.body.update, { new: true }, function(err, event) {
+  Event.findOneAndUpdate({ cuid }, req.body.update, { new: true }, (err, event) => {
     res.status(200).send({ success: !err, err, event });
   });
 }

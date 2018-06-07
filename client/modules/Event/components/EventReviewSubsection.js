@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import slugify from 'slugify';
+import React, { Component, PropTypes } from 'react';
 
 // Import Styles
 import styles from './EventReviewSection/EventReviewSection.css';
@@ -17,22 +16,6 @@ class EventReviewSubsection extends Component {
     };
   }
 
-  expand = e => {
-    e.preventDefault();
-    this.setState({
-      expanded: !this.state.expanded,
-    });
-  }
-
-  checkForSubmit = e => {
-    if (e.key === 'Enter') {
-      this.props.updateField(this.state.openInput)(e.target.value);
-      this.setState({
-        openInput: null,
-      });
-    }
-  }
-
   onInputChange = e => {
     this.setState({ inputValue: e.target.value });
   }
@@ -45,11 +28,26 @@ class EventReviewSubsection extends Component {
     });
   }
 
+  checkForSubmit = e => {
+    if (e.key === 'Enter') {
+      this.props.updateField(this.state.openInput)(e.target.value);
+      this.setState({
+        openInput: null,
+      });
+    }
+  }
+
+  expand = e => {
+    e.preventDefault();
+    this.setState({
+      expanded: !this.state.expanded,
+    });
+  }
+
   render() {
     const {
       subsectionTotal,
       subsection,
-      updateField,
       // State of value is either display or editing (editing: true/false)
       // When we are editing, we provide a function onValueChange and onValueSave
     } = this.props;
@@ -81,36 +79,43 @@ class EventReviewSubsection extends Component {
           </div>
         </div>
         {this.state.expanded
-          ? <div>
-              {subsection.fields.map(field => (
-                <div key={field.slug} className={`${styles['event-review-subsection-field']} ${styles['event-review__field-row']}`}>
-                  <div>
-                    {field.name}
-                  </div>
-                  <div
-                    style={{ display: this.state.openInput === field.slug ? 'none' : 'block' }}
-                    onClick={this.onValueClick(field.slug)(field.value)}
-                  >
-                    {eventValueDisplays[field.display](field.value)}
-                  </div>
-                  <div style={{ display: this.state.openInput === field.slug ? 'block' : 'none' }}>
-                    <input
-                      className={styles['event-review-input']}
-                      type="number"
-                      value={this.state.inputValue}
-                      onKeyPress={this.checkForSubmit}
-                      onChange={this.onInputChange}
-                    />
-                  </div>
+          ? (
+          <div>
+            {subsection.fields.map(field => (
+              <div key={field.slug} className={`${styles['event-review-subsection-field']} ${styles['event-review__field-row']}`}>
+                <div>
+                  {field.name}
                 </div>
-              ))}
-              { /*<AddFieldRow /> */}
-            </div>
+                <div
+                  style={{ display: this.state.openInput === field.slug ? 'none' : 'block' }}
+                  onClick={this.onValueClick(field.slug)(field.value)}
+                >
+                  {eventValueDisplays[field.display](field.value)}
+                </div>
+                <div style={{ display: this.state.openInput === field.slug ? 'block' : 'none' }}>
+                  <input
+                    className={styles['event-review-input']}
+                    type="number"
+                    value={this.state.inputValue}
+                    onKeyPress={this.checkForSubmit}
+                    onChange={this.onInputChange}
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+          )
           : null
         }
       </div>
     );
   }
 }
+
+EventReviewSubsection.propTypes = {
+  subsectionTotal: PropTypes.object.isRequired,
+  subsection: PropTypes.object.isRequired,
+  updateField: PropTypes.func.isRequired,
+};
 
 export default EventReviewSubsection;

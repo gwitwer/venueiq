@@ -1,5 +1,4 @@
 import Event from '../models/event';
-import slugify from 'slugify';
 import defaultEventData from './defaultEventData';
 import cuid from 'cuid';
 
@@ -19,8 +18,8 @@ const createEvent = ({
   dateLastUpdated,
   time,
   tags,
-  data: data ? data : defaultEventData.data,
-  cuid: defaultCuid ? defaultCuid : cuid(),
+  data: data || defaultEventData.data,
+  cuid: defaultCuid || cuid(),
 })).save();
 
 export default createEvent;

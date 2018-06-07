@@ -1,3 +1,5 @@
+import callApi from '../../util/apiCaller';
+
 // Export Constants
 export const SET_USER = 'SET_USER';
 
@@ -10,6 +12,6 @@ export function setUser(user) {
 
 export function fetchUser() {
   return dispatch => {
-    return callApi(`users/active`).then(res => dispatch(setUser(res.user)));
+    return callApi('users/active').then(res => dispatch(setUser(res.user)));
   };
 }

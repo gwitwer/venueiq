@@ -1,6 +1,4 @@
 import User from '../models/user';
-import cuid from 'cuid';
-// import slug from 'limax';
 
 /**
  * Get active user
@@ -13,10 +11,10 @@ export function getUser(req, res) {
 }
 
 export function updateUser(req, res) {
-  User.findOneAndUpdate({ cuid: req.session.user.cuid }, req.body, function(err, doc) {
+  User.findOneAndUpdate({ cuid: req.session.user.cuid }, req.body, (err, user) => {
     if (err) {
-      console.log(err);
+      console.log(err); // eslint-disable-line no-console
     }
-    res.status(200).send({ success: !err, err });
+    res.status(200).send({ success: !err, err, user });
   });
 }

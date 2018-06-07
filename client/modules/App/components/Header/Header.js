@@ -1,10 +1,10 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import { Link } from 'react-router';
 
 // Import Style
 import styles from './Header.css';
 
-export function Header(props, context) {
+export function Header() {
   return (
     <div className={styles.header}>
       <div className={styles.content}>
@@ -20,8 +20,6 @@ Header.contextTypes = {
   router: React.PropTypes.object,
 };
 
-Header.propTypes = {
-  
-};
+Header.propTypes = {};
 
 export default Header;

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 
 import styles from './EventReviewSection.css';
 
@@ -30,5 +30,11 @@ const EventReviewSection = ({
     </div>
   </div>
 );
+
+EventReviewSection.propTypes = {
+  sectionTotals: PropTypes.object.isRequired,
+  section: PropTypes.object.isRequired,
+  updateField: PropTypes.func.isRequired,
+};
 
 export default EventReviewSection;

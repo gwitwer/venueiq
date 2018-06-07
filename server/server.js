@@ -135,7 +135,6 @@ const renderError = err => {
 
 // Logged in middleware for main app
 app.use((req, res, next) => {
-  console.log('checking user');
   if (req.session.user) {
     next();
   } else {
