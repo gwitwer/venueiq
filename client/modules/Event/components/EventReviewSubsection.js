@@ -113,7 +113,7 @@ class EventReviewSubsection extends Component {
 }
 
 EventReviewSubsection.propTypes = {
-  subsectionTotal: PropTypes.object.isRequired,
+  subsectionTotal: PropTypes.number.isRequired,
   subsection: PropTypes.object.isRequired,
   updateField: PropTypes.func.isRequired,
 };

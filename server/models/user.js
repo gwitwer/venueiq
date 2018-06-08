@@ -12,9 +12,8 @@ const userSchema = new Schema({
   fb_page_access_token: { type: 'String' },
   fb_adaccount: { type: 'String' },
   fb_business: { type: 'String' },
-  misc: { type: Schema.Types.Mixed },
-  savedRevenues: { type: ['String'], default: [] },
-  savedExpenditures: { type: ['String'], default: [] },
+  misc: { type: Schema.Types.Mixed }, // This is some ads bullshit (temporary)
+  savedEventListFields: { type: ['String'], default: [] }, // These are how the events are filtered.
 });
 
 export default mongoose.model('User', userSchema);

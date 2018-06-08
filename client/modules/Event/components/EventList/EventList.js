@@ -10,7 +10,7 @@ function EventList(props) {
         props.events.map(event => (
           <EventListItem
             event={event}
-            key={event.cuid}
+            key={`event-${event.cuid}`}
           />
         ))
       }

@@ -1,5 +1,6 @@
 import slug from 'limax';
 import createEvent from './util/createEvent';
+import Event from './models/event';
 
 export default function () {
   const eventCount = Event.count().exec();
