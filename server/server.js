@@ -166,11 +166,13 @@ app.use((req, res, next) => {
     }
 
     // Set initial app state to inject logged-in user
+    // NOTE: This is working on the server but is being overwritten on the client (weird fetch user problem).
+    // TODO: figure out a way to preserve the user...
     const store = configureStore({
       app: {
         ...initialAppState,
-        user: { ...req.session.user },
       },
+      user: { ...req.session.user },
     });
 
     return fetchComponentData(store, renderProps.components, renderProps.params)

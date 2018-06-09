@@ -33,7 +33,7 @@ const AppReducer = (state = initialState, action) => {
 /* Selectors */
 
 // Get user
-export const getUser = state => state.app.user;
+export const getUser = state => state.user;
 
 // Export Reducer
 export default AppReducer;

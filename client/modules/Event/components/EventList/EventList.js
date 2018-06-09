@@ -14,7 +14,7 @@ const convertToDowCode = time => {
     'Sat',
   ];
   return codes[time.getDay()];
-}
+};
 
 const eventsFilter = filter => event => {
   if (!filter || !filter.length) {
@@ -31,13 +31,14 @@ const eventsFilter = filter => event => {
   return Object.keys(matches).reduce((p, k) => matches[k] || p, false);
 };
 
-const EventList = ({ events, filter }) => {
+const EventList = ({ events, filter, activeFields }) => {
   return (
     <div>
       {
         events.filter(eventsFilter(filter)).map(event => (
           <EventListItem
             event={event}
+            activeFields={activeFields}
             key={`event-${event.cuid}`}
           />
         ))

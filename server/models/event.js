@@ -8,6 +8,7 @@ const eventSchema = new Schema({
   uid: { type: 'String', required: true },
   dateLastUpdated: { type: 'Date', default: Date.now, required: true },
   time: { type: 'Date', required: true },
+  day: { type: 'String', required: true },
   tags: { type: ['String'], default: [] },
   data: [{
     name: { type: 'String' },

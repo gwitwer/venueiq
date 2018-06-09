@@ -11,7 +11,7 @@ export function getEvents(req, res) {
   const uid = process.env.NODE_ENV === 'production'
     ? req.session.user.cuid
     : '1';
-  const findEvents = Event.find({ uid }).exec();
+  const findEvents = Event.find({ uid }).sort({ time: -1 }).exec();
   findEvents.then(events => res.json({ events })).catch(err => res.json({ err }));
 }
 

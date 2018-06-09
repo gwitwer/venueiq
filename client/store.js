@@ -6,7 +6,20 @@ import thunk from 'redux-thunk';
 import DevTools from './modules/App/components/DevTools';
 import rootReducer from './reducers';
 
+let user = null;
+
 export function configureStore(initialState = {}) {
+  // Preserve user from server
+  if (!user) {
+    user = initialState.user;
+  }
+
+  // For client: Apply preserved user from server
+  if (!initialState.user) {
+    initialState.user = user; // eslint-disable-line no-param-reassign
+    initialState.app.user = user; // eslint-disable-line no-param-reassign
+  }
+
   // Middleware and store enhancers
   const enhancers = [
     applyMiddleware(thunk),

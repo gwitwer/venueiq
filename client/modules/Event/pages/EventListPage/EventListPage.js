@@ -25,6 +25,7 @@ class EventListPage extends Component {
 
   componentDidMount() {
     this.props.dispatch(fetchEvents());
+    this.props.dispatch(fetchUser());
   }
 
   render() {
@@ -33,7 +34,7 @@ class EventListPage extends Component {
       filter,
       user,
     } = this.props;
-    console.log(user);
+
     return (
       <div>
         <EventsFilter />

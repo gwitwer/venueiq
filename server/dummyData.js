@@ -2,18 +2,29 @@ import slug from 'limax';
 import createEvent from './util/createEvent';
 import Event from './models/event';
 
+const days = [
+  'Sun',
+  'Mon',
+  'Tue',
+  'Wed',
+  'Thu',
+  'Fri',
+  'Sat',
+];
+
 export default function () {
-  const eventCount = Event.count().exec();
-  // const removeEvents = Event.remove({ cuid: '15' }).exec();
-  return eventCount.then(count => {
-    if (!count) {
+  // const eventCount = Event.count().exec();
+  const removeEvents = Event.remove({}).exec();
+  return removeEvents.then(count => {
+    if (true || !count) {
       return Promise.all([
         createEvent({
           name: 'Latin Night',
           type: 'latin',
           uid: '1',
           dateLastUpdated: new Date(),
-          time: new Date('November 9, 2018'),
+          time: new Date('November 9, 2017'),
+          day: days[(new Date('November 9, 2017')).getDay()],
           tags: ['dance', 'recurring', 'music', 'dj'],
           defaultCuid: '1',
           data: [
@@ -216,6 +227,7 @@ export default function () {
           uid: '1',
           dateLastUpdated: new Date(),
           time: new Date('January 27, 2018'),
+          day: days[(new Date('January 27, 2018')).getDay()],
           tags: ['dance', 'music', 'benefit'],
           data: [
             {
@@ -417,6 +429,7 @@ export default function () {
           uid: '1',
           dateLastUpdated: new Date(),
           time: new Date('April 21, 2018'),
+          day: days[(new Date('April 21, 2018')).getDay()],
           tags: ['music', 'dj'],
           data: [
             {

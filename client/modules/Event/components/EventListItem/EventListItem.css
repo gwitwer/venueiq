@@ -9,7 +9,32 @@
 
 .event-review {
   padding: 3px 12px 4px;
+  width: 80px;
   background-color: #ccc;
   color: #fff;
   text-decoration: none;
+}
+
+.event-list-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+}
+
+.event-list-header__item {
+  flex-basis: 140px;
+  text-align: center;
+}
+
+.event-list-header__action {
+  text-align: center;
+  flex-basis: 80px;
+}
+
+.event-list-header__name {
+  flex-basis: 200px;
+  max-width: 200px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  text-align: left;
 }

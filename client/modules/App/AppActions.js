@@ -13,8 +13,9 @@ export function setUser(user) {
 export function fetchUser() {
   return dispatch => {
     return callApi('user').then(res => {
-      console.log(res);
-      dispatch(setUser(res.user))
+      if (res && res.user) {
+        dispatch(setUser(res.user));
+      }
     });
   };
 }
