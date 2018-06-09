@@ -5,6 +5,8 @@ export const ADD_EVENT = 'ADD_EVENT';
 export const ADD_EVENTS = 'ADD_EVENTS';
 export const DELETE_EVENT = 'DELETE_EVENT';
 export const UPDATE_EVENT = 'UPDATE_EVENT';
+export const UPDATE_FILTER = 'UPDATE_FILTER';
+export const CLEAR_FILTER = 'CLEAR_FILTER';
 
 // Export Actions
 export function addEvent(event) {
@@ -37,6 +39,19 @@ export function addEvents(events) {
   return {
     type: ADD_EVENTS,
     events,
+  };
+}
+
+export function clearFilter() {
+  return {
+    type: CLEAR_FILTER,
+  };
+}
+
+export function updateFilter(filter) {
+  return {
+    type: UPDATE_FILTER,
+    filter,
   };
 }
 

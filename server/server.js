@@ -72,8 +72,8 @@ app.use(session({
   secret: 'm4venly!',
   cookie: { maxAge: 1000 * 60 * 60 * 24 * 30 },
   store: sessionStore,
-  resave: true,
-  saveUninitialized: true,
+  resave: false,
+  saveUninitialized: false,
 }));
 
 // Apply body Parser and server public assets and routes
@@ -86,6 +86,15 @@ app.set('views', path.join(__dirname, '../', 'views'));
 app.set('view engine', 'pug');
 app.use('/auth', auth);
 app.use('/api', api);
+
+// Logged in middleware for main app
+app.use((req, res, next) => {
+  if (req.session.user) {
+    next();
+  } else {
+    res.redirect('/auth/home');
+  }
+});
 
 // Render Initial HTML
 const renderFullPage = (html, initialState) => {
@@ -109,6 +118,14 @@ const renderFullPage = (html, initialState) => {
         <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'/>
         <link rel="shortcut icon" href="http://res.cloudinary.com/hashnode/image/upload/v1455629445/static_imgs/mern/mern-favicon-circle-fill.png" type="image/png" />
         <link rel="stylesheet" href="https://unpkg.com/react-select@1.2.1/dist/react-select.css">
+        <style>
+          body {
+            font-size: 1rem;
+          }
+          a {
+            text-decoration: none;
+          }
+        </style>
       </head>
       <body>
         <div id="root">${html}</div>
@@ -132,15 +149,6 @@ const renderError = err => {
     `:<br><br><pre style="color:red">${softTab}${err.stack.replace(/\n/g, `<br>${softTab}`)}</pre>` : '';
   return renderFullPage(`Server Error${errTrace}`, {});
 };
-
-// Logged in middleware for main app
-app.use((req, res, next) => {
-  if (req.session.user) {
-    next();
-  } else {
-    res.redirect('/auth/home');
-  }
-});
 
 // Server Side Rendering based on routes matched by React-router.
 app.use((req, res, next) => {

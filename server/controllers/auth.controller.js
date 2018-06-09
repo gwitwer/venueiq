@@ -21,7 +21,7 @@ export function postLogin(req, res) {
   findUser.then(user => {
     if (user) {
       if (checkHash(pass)(user.pass)) {
-        req.session.user = { email: user.email, access_token: user.access_token, cuid: user.cuid }; // eslint-disable-line no-param-reassign
+        req.session.user = { email: user.email, access_token: user.access_token, cuid: user.cuid, activeFields: user.activeFields }; // eslint-disable-line no-param-reassign
         res.status(200).send({ success: true, user });
       } else {
         res.status(200).send({ err: 'Incorrect password for this user' });
@@ -81,7 +81,7 @@ export function postSignup(req, res) {
           if (err) {
             res.status(500).send(err);
           }
-          req.session.user = { email: saved.email, access_token: saved.access_token, cuid: saved.cuid }; // eslint-disable-line no-param-reassign
+          req.session.user = { email: saved.email, access_token: saved.access_token, cuid: saved.cuid, activeFields: saved.activeFields }; // eslint-disable-line no-param-reassign
           res.json({ success: true });
         });
       });

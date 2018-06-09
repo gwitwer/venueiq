@@ -4,17 +4,24 @@ import { Link } from 'react-router';
 // Import Style
 import styles from './EventListItem.css';
 
-function EventListItem(props) {
+const EventListItem = ({ event }) => {
   return (
-    <div className={styles['single-event']}>
-      <h3 className={styles['event-title']}>
-        <Link to={`/events/${props.event.cuid}/review`} >
-          {props.event.name}
-        </Link>
-      </h3>
-    </div>
+    <Link to={`/events/${event.cuid}`}>
+      <div className={styles['event-list-item']}>
+        <div className={styles['event-name']}>
+          {event.name}
+        </div>
+        <div>
+          <Link to={`/events/${event.cuid}/review`}>
+            <div className={styles['event-review']}>
+              Review
+            </div>
+          </Link>
+        </div>
+      </div>
+    </Link>
   );
-}
+};
 
 EventListItem.propTypes = {
   event: PropTypes.object.isRequired,

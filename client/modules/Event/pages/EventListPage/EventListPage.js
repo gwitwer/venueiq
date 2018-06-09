@@ -10,12 +10,16 @@ import { connect } from 'react-redux';
 
 // Import Components
 import EventList from '../../components/EventList/EventList';
+import EventsFilter from '../../components/EventsFilter/EventsFilter';
+import EventListHeader from '../../components/EventListHeader/EventListHeader';
 
 // Import Actions
 import { fetchEvents } from '../../EventActions';
+import { fetchUser } from '../../../App/AppActions';
 
 // Import Selectors
-import { getEvents } from '../../EventReducer';
+import { getEvents, getEventsFilter } from '../../EventReducer';
+import { getUser } from '../../../App/AppReducer';
 
 class EventListPage extends Component {
 
@@ -24,27 +28,39 @@ class EventListPage extends Component {
   }
 
   render() {
+    const {
+      events,
+      filter,
+      user,
+    } = this.props;
+    console.log(user);
     return (
       <div>
-        <EventList events={this.props.events} />
+        <EventsFilter />
+        <EventListHeader activeFields={user.activeFields} />
+        <EventList events={events} filter={filter || ''} activeFields={user.activeFields} />
       </div>
     );
   }
 }
 
 // Actions required to provide data for this component to render in sever side.
-EventListPage.need = [fetchEvents];
+EventListPage.need = [fetchEvents, fetchUser];
 
 // Retrieve data from store as props
 function mapStateToProps(state) {
   return {
     events: getEvents(state),
+    filter: getEventsFilter(state),
+    user: getUser(state),
   };
 }
 
 EventListPage.propTypes = {
   events: PropTypes.arrayOf(PropTypes.object).isRequired,
+  filter: PropTypes.string,
   dispatch: PropTypes.func.isRequired,
+  user: PropTypes.object.isRequired,
 };
 
 EventListPage.contextTypes = {

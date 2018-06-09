@@ -7,6 +7,7 @@ import User from '../models/user';
  * @returns void
  */
 export function getUser(req, res) {
+  console.log('HERE!', req.session.user);
   res.json({ user: req.session.user });
 }
 

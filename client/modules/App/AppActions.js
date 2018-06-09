@@ -12,6 +12,9 @@ export function setUser(user) {
 
 export function fetchUser() {
   return dispatch => {
-    return callApi('users/active').then(res => dispatch(setUser(res.user)));
+    return callApi('user').then(res => {
+      console.log(res);
+      dispatch(setUser(res.user))
+    });
   };
 }

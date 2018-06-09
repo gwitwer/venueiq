@@ -13,7 +13,15 @@ const userSchema = new Schema({
   fb_adaccount: { type: 'String' },
   fb_business: { type: 'String' },
   misc: { type: Schema.Types.Mixed }, // This is some ads bullshit (temporary)
-  savedEventListFields: { type: ['String'], default: [] }, // These are how the events are filtered.
+  activeFields: { type: ['String'], default: [
+    'revenue',
+    'attendance',
+    'promotional-spending',
+    'day',
+    'genre',
+  ] }, // These are how the events are filtered.
+  // If we have a hard-coded method for fetching the data, then it's just a string
+  // Otherwise a . join on the path to the item in data.
 });
 
 export default mongoose.model('User', userSchema);
