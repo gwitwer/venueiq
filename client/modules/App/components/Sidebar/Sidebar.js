@@ -9,14 +9,11 @@ export function Sidebar() {
   return (
     <div className={styles.sidebar}>
       <ul>
-        <li>
+        <li className={styles['sidebar-list-item']}>
           <Link to="/">Overview</Link>
         </li>
-        <li>
+        <li className={styles['sidebar-list-item']}>
           <Link to="/events">Events</Link>
-        </li>
-        <li>
-          <Link to="/settings">Settings</Link>
         </li>
       </ul>
     </div>

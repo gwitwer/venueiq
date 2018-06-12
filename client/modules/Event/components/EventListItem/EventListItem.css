@@ -7,10 +7,11 @@
   justify-content: space-between;
 }
 
-.event-review {
-  padding: 3px 12px 4px;
-  width: 80px;
-  background-color: #ccc;
+.event-review-link {
+  padding: 5px 26px 6px;
+  display: block;
+  background-color: #4CBA48;
+  font-size: 0.85rem;
   color: #fff;
   text-decoration: none;
 }
@@ -28,7 +29,7 @@
 
 .event-list-header__action {
   text-align: center;
-  flex-basis: 80px;
+  flex-basis: 100px;
 }
 
 .event-list-header__name {

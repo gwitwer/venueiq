@@ -16,7 +16,7 @@ export default function () {
   // const eventCount = Event.count().exec();
   const removeEvents = Event.remove({}).exec();
   return removeEvents.then(count => {
-    if (true || !count) {
+    if (true || !count) { // eslint-disable-line no-constant-condition
       return Promise.all([
         createEvent({
           name: 'Latin Night',

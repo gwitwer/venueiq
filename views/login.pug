@@ -1,17 +1,27 @@
 extends layout
 
 block content
-  div
-    h1 Log In
-    form
+  main
+    #header
+      .logo
+        a(href="/auth/home")
+          img(src="/images/logo-white.png")
       div
-        label(for="email") Email
-        input#email(type="email", name="email")
-      div
-        label(for="password") Password
-        input#pass(type="password", name="password")
-      div
-        input(type="submit", value="Submit")
-    
-    script(src="/js/login.js")
-    
+        ul
+          li
+            a(href="/auth/start") Sign Up
+          li
+            a(href="/auth/login") Login
+    .short-page-container
+      .primary-section
+        .title-text Log In
+        form.main-input-block
+          div
+            input#email(type="email", name="email", placeholder="Email")
+          div
+            input#pass(type="password", name="password", placeholder="Password")
+          div
+            input.form-submit(type="submit", value="Submit")
+        
+      script(src="/js/login.js")
+      

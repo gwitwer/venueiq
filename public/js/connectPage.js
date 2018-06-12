@@ -31,5 +31,5 @@
       console.log('Bad query!');
       consoe.log(window.query);
     }
-  }
+  };
 })();

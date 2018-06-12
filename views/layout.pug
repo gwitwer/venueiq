@@ -7,7 +7,10 @@ html
 		meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1")
 			
 		script(src="https://unpkg.com/axios/dist/axios.min.js")
-
+		link(href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700', rel='stylesheet')
+		link(href="/stylesheets/main.css", rel="stylesheet")
+		link(href="/stylesheets/home.css", rel="stylesheet")
+		link(href="/stylesheets/login.css", rel="stylesheet")
 		title= title
 		
 	body
@@ -25,17 +28,20 @@ html
 				console.log('run init');
 				setTimeout(function() {
 					if (typeof(window.pageCode) !== 'undefined') {
+						console.log('running page code');
 						window.pageCode();
 					}
 				}, 0);
 			};
 		script(src="/js/getQuery.js")
-
-		#main
-			.header
-				.logo
-				h1.text-center #{title}
-			block content
-		.footer
-			div
-				div &copy; Venue Analytics 2018
+		.container
+			#main
+				block content
+			#footer
+				div &copy; Venue Analytics, 2018
+				div
+					ul
+						li
+							a(href="mailto:david@venueiq.co") david@venueiq.co
+						li
+							a(href="/auth/login") Login

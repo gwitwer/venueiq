@@ -21,6 +21,9 @@ import { fetchUser } from '../../../App/AppActions';
 import { getEvents, getEventsFilter } from '../../EventReducer';
 import { getUser } from '../../../App/AppReducer';
 
+// Import Styles
+import mainStyles from '../../../../main.css';
+
 class EventListPage extends Component {
 
   componentDidMount() {
@@ -37,6 +40,7 @@ class EventListPage extends Component {
 
     return (
       <div>
+        <div className={mainStyles['page-title']}>Events</div>
         <EventsFilter />
         <EventListHeader activeFields={user.activeFields} />
         <EventList events={events} filter={filter || ''} activeFields={user.activeFields} />

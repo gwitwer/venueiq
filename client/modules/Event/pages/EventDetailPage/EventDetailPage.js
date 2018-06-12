@@ -4,6 +4,7 @@ import Helmet from 'react-helmet';
 
 // Import Style
 import styles from './EventDetailPage.css';
+import mainStyles from '../../../../main.css';
 
 // Import Actions
 import { fetchEvent } from '../../EventActions';
@@ -15,8 +16,8 @@ export function EventDetailPage(props) {
   return (
     <div>
       <Helmet title={props.event.name} />
+      <div className={mainStyles['page-title']}>{props.event.name}</div>
       <div className={`${styles['event-detail']}`}>
-        <h3 className={styles['event-title']}>{props.event.name}</h3>
       </div>
     </div>
   );

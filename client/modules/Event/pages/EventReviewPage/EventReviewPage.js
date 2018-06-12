@@ -4,6 +4,7 @@ import Helmet from 'react-helmet';
 
 // Import Style
 import styles from './EventReviewPage.css';
+import mainStyles from '../../../../main.css';
 
 // Import Components
 import EventReviewSection from '../../components/EventReviewSection/EventReviewSection';
@@ -72,9 +73,9 @@ export function EventReviewPage({ event, dispatch }) {
   return (
     <div>
       <Helmet title={`${event.name} - Review`} />
+      <div className={mainStyles['page-title']}>{event.name}</div>
+      <h4>Review</h4>
       <div className={`${styles['event-detail']}`}>
-        <h3 className={styles['event-title']}>{event.name}</h3>
-        <h4>Review</h4>
         <div>
           {event.data.map(section => (
             <EventReviewSection

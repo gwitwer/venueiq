@@ -4,12 +4,17 @@ import { Link } from 'react-router';
 // Import Style
 import styles from './Header.css';
 
+// Import Images
+import logo from '../../logo.png';
+
 export function Header() {
   return (
     <div className={styles.header}>
       <div className={styles.content}>
         <h1 className={styles['site-title']}>
-          <Link to="/" >Venue IQ</Link>
+          <Link to="/" style={{ display: 'flex' }}>
+            <img src={logo} className={styles['header-logo']} alt="Logo" />
+          </Link>
         </h1>
       </div>
     </div>

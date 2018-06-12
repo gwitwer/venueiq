@@ -1,9 +1,27 @@
 extends layout
 
 block content
-  h1 Home
-  ul
-    li
-      a(href="/auth/login") Login
-    li
-      a(href="/auth/start") Sign up
+  main
+    .primary-section
+      div#big-text Event Record Keeping, Simplified.
+      div#big-logo
+        img(src="/images/logo-white.png", style="width: 100%;height: auto;")
+      div#about-viq
+          span Manage your books.&nbsp;
+          span Sync your apps.&nbsp;
+          span Boost your attendance.
+      div.landing-cta
+        a.landing-btn(href="https://invis.io/RCG4DE54TD2", target="_blank")
+          div Explore our Preview
+      div#sign-up.main-input-block
+        .title-text Stay Posted
+        div
+          div
+            input#email(type="text", placeholder="Your email")
+          div
+            input#org(type="text", placeholder="Your organization")
+          div
+            a#submit.form-submit Submit
+            span#success(style="display: none;") Thanks! We'll be in touch.
+    
+  script(src='/js/submitEmail.js')

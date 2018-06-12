@@ -93,7 +93,7 @@ export function postSignup(req, res) {
 
 export function getLogout(req, res) {
   delete req.session.user; // eslint-disable-line no-param-reassign
-  res.redirect('/auth/login');
+  res.redirect('/auth/home');
 }
 
 export function getConnectPage(req, res) {

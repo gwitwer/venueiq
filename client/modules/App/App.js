@@ -44,7 +44,7 @@ export class App extends Component {
           <div className={styles.container}>
             <Sidebar />
             <div style={{ flex: 1, padding: '2rem' }}>
-              <div style={{ maxWidth: '980px' }}>
+              <div style={{ maxWidth: '1200px', margin: '0 auto', minHeight: '450px' }}>
                 {this.props.children}
               </div>
             </div>

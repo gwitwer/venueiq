@@ -43,10 +43,8 @@ const EventListItem = ({ event, activeFields }) => {
           </div>
         ))}
         <div>
-          <Link to={`/events/${event.cuid}/review`}>
-            <div className={styles['event-review']}>
-              Review
-            </div>
+          <Link to={`/events/${event.cuid}/review`} className={styles['event-review-link']}>
+            REVIEW
           </Link>
         </div>
       </div>

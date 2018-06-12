@@ -2,12 +2,15 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 // Import Style
-// import styles from './Overview.css';
+import mainStyles from '../../main.css';
 
 export function Overview() {
   return (
     <div>
-      <h1>Overview</h1>
+      <div className={mainStyles['page-title']}>Overview</div>
+      <div>
+        <div style={{ textAlign: 'center', fontStyle: 'italic', fontSize: '2.4rem', margin: '6rem 0', color: '#ccc', fontWeight: '300' }}>{'Ain\'t got shit!'}</div>
+      </div>
     </div>
   );
 }

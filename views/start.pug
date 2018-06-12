@@ -3,17 +3,36 @@ extends layout
 block content
   h1 Connect to Facebook
   script.
-    window.test = function(response) {
+    window.goToSignup = function(response) {
       console.log(response.authResponse);
       window.location.href = window.location.origin + '/auth/signup?user_id=' + response.authResponse.userID + '&access_token=' + response.authResponse.accessToken; 
-    }
+    };
+    
+    var finished_rendering = function() {
+      console.log("finished rendering plugins");
+      var spinner = document.getElementById("spinner");
+      spinner.removeAttribute("style");
+      spinner.removeChild(spinner.childNodes[0]);
+    };
+    
+    window.pageCode = function() {
+      FB.Event.subscribe('xfbml.render', finished_rendering);
+      FB.getLoginStatus(function(response) {
+        if (response.status === 'connected') {
+          goToSignup(response);
+        }
+      });
+    };
+  #spinner(
+    style='background: #4267b2;border-radius: 5px;color: white;text-align: center; display: inline-block; padding: 5px 15px;'
+  ) Loading...
   div.fb-login-button(
     data-max-rows="1",
     data-size="medium",
     data-button-type="continue_with",
     data-show-faces="false",
     data-auto-logout-link="false",
-    data-use-continue-as="false",
-    data-onlogin="test",
+    data-use-continue-as="true",
+    data-onlogin="goToSignup",
     data-scope="user_friends, manage_pages, pages_show_list, ads_management, business_management, public_profile, public_profile"
   )

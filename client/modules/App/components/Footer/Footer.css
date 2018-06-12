@@ -1,17 +1,17 @@
-.footer{
-  text-align: center;
-  padding: 56px 0;
+.footer {
+  padding: 2rem 0;
   background-size: cover;
+  border-top: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  padding-left: 140px;
 }
 
-.footer p{
-  margin: 0 0 8px 0;
-  font-size: 14px;
-  color: #FFF;
+.footer p {
+  font-size: 0.85rem;
 }
 
-.footer a{
-  color: #FFF;
+.footer a {
   text-decoration: none;
   font-weight: 700;
 }
