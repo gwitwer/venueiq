@@ -11,9 +11,11 @@ import EventReviewSection from '../../components/EventReviewSection/EventReviewS
 
 // Import Actions
 import { fetchEvent, updateEventRequest } from '../../EventActions';
+import { fetchUser } from '../../../App/AppActions';
 
 // Import Selectors
 import { getEvent } from '../../EventReducer';
+import { getUser } from '../../../App/AppReducer';
 
 const getTotals = event => {
   const totals = {};
@@ -38,7 +40,7 @@ const getTotals = event => {
   return totals;
 };
 
-const updateField = dispatch => event => slug => value => {
+const updateField = dispatch => uid => event => slug => value => {
   // Deep copy the object to replace in the document.
   const copiedData = JSON.parse(JSON.stringify(event.data));
 
@@ -65,10 +67,10 @@ const updateField = dispatch => event => slug => value => {
     }
     if (found) break; // Break if we found it
   }
-  updateEventRequest(event.cuid, { $set: { data: copiedData } })(dispatch);
+  updateEventRequest(uid, event.cuid, { $set: { data: copiedData } })(dispatch);
 };
 
-export function EventReviewPage({ event, dispatch }) {
+export function EventReviewPage({ event, user, dispatch }) {
   const totals = getTotals(event);
   return (
     <div>
@@ -82,7 +84,7 @@ export function EventReviewPage({ event, dispatch }) {
               section={section}
               sectionTotals={totals[section.slug]}
               key={section.slug}
-              updateField={updateField(dispatch)(event)}
+              updateField={updateField(dispatch)(user.cuid)(event)}
             />
           ))}
         </div>
@@ -93,18 +95,21 @@ export function EventReviewPage({ event, dispatch }) {
 
 // Actions required to provide data for this component to render in server side.
 EventReviewPage.need = [
-  params => fetchEvent(params.cuid),
+  (params, state) => fetchEvent(state.user.cuid, params.cuid),
+  fetchUser,
 ];
 
 // Retrieve data from store as props
 function mapStateToProps(state, props) {
   return {
     event: getEvent(state, props.params.cuid),
+    user: getUser(state),
   };
 }
 
 EventReviewPage.propTypes = {
   event: PropTypes.object.isRequired,
+  user: PropTypes.object.isRequired,
   dispatch: PropTypes.func.isRequired,
 };
 

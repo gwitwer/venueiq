@@ -2,7 +2,6 @@
   window.pageCode = function() {
     var form = document.querySelector('form');
     form.addEventListener('submit', function(e) {
-      console.log('here');
       e.preventDefault();
       axios.post('/auth/login', {
         email: document.querySelector('#email').value,

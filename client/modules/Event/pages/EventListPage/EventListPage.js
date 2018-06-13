@@ -27,7 +27,7 @@ import mainStyles from '../../../../main.css';
 class EventListPage extends Component {
 
   componentDidMount() {
-    this.props.dispatch(fetchEvents());
+    this.props.dispatch(fetchEvents(this.props.user.cuid));
     this.props.dispatch(fetchUser());
   }
 
@@ -50,7 +50,10 @@ class EventListPage extends Component {
 }
 
 // Actions required to provide data for this component to render in sever side.
-EventListPage.need = [fetchEvents, fetchUser];
+EventListPage.need = [
+  (params, state) => fetchEvents(state.user.cuid),
+  fetchUser
+];
 
 // Retrieve data from store as props
 function mapStateToProps(state) {

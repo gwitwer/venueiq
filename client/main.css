@@ -38,3 +38,22 @@ body {
 	font-size: 1.4rem;
 	font-weight: 700;
 }
+
+.page-title-wrapper {
+	display: flex;
+	justify-content: space-between;
+}
+
+.event-review-link {
+  padding: 5px 26px 6px;
+  display: block;
+  background-color: #4CBA48;
+  font-size: 0.85rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+.event-review-link__large {
+  padding: 7px 32px 8px;
+  font-size: 1rem;
+}

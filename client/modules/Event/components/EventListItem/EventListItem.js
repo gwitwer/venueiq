@@ -3,6 +3,7 @@ import { Link } from 'react-router';
 
 // Import Style
 import styles from './EventListItem.css';
+import mainStyles from '../../../../main.css';
 
 const getField = event => field => {
   const keys = Object.keys(event);
@@ -43,7 +44,7 @@ const EventListItem = ({ event, activeFields }) => {
           </div>
         ))}
         <div>
-          <Link to={`/events/${event.cuid}/review`} className={styles['event-review-link']}>
+          <Link to={`/events/${event.cuid}/review`} className={mainStyles['event-review-link']}>
             REVIEW
           </Link>
         </div>

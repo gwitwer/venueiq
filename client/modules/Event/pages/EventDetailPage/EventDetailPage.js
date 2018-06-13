@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import Helmet from 'react-helmet';
+import { Link } from 'react-router';
 
 // Import Style
 import styles from './EventDetailPage.css';
@@ -16,8 +17,14 @@ export function EventDetailPage(props) {
   return (
     <div>
       <Helmet title={props.event.name} />
-      <div className={mainStyles['page-title']}>{props.event.name}</div>
+      <div className={mainStyles['page-title-wrapper']}>
+        <div className={mainStyles['page-title']}>{props.event.name}</div>
+        <div>
+          <Link to={`/events/${props.event.cuid}/review`} className={`${mainStyles['event-review-link__large']} ${mainStyles['event-review-link']}`}>REVIEW</Link>
+        </div>
+      </div>
       <div className={`${styles['event-detail']}`}>
+        <div style={{ textAlign: 'center', fontStyle: 'italic', fontSize: '2.4rem', margin: '6rem 0', color: '#ccc', fontWeight: '300' }}>{'Ain\'t got shit!'}</div>
       </div>
     </div>
   );
@@ -25,7 +32,7 @@ export function EventDetailPage(props) {
 
 // Actions required to provide data for this component to render in server side.
 EventDetailPage.need = [
-  params => fetchEvent(params.cuid),
+  (params, state) => fetchEvent(state.user.cuid, params.cuid),
 ];
 
 // Retrieve data from store as props

@@ -59,7 +59,6 @@ const EventReducer = (state = initialState, action) => {
 
 // Get all events
 export const getEvents = state => {
-  console.log(state);
   return state.events.data || [];
 };
 

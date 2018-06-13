@@ -29,9 +29,9 @@ export function updateEvent(event) {
   };
 }
 
-export function updateEventRequest(cuid, update) {
+export function updateEventRequest(uid, cuid, update) {
   return dispatch => {
-    return callApi(`events/${cuid}`, 'post', { update }).then(res => dispatch(updateEvent(res.event)));
+    return callApi(`events/${uid}/${cuid}`, 'post', { update }).then(res => dispatch(updateEvent(res.event)));
   };
 }
 
@@ -55,16 +55,16 @@ export function updateFilter(filter) {
   };
 }
 
-export function fetchEvents() {
+export function fetchEvents(uid) {
   return dispatch => {
-    return callApi('events').then(res => {
+    return callApi(`events/${uid}`).then(res => {
       dispatch(addEvents(res.events));
     });
   };
 }
 
-export function fetchEvent(cuid) {
+export function fetchEvent(uid, cuid) {
   return dispatch => {
-    return callApi(`events/${cuid}`).then(res => dispatch(addEvent(res.event)));
+    return callApi(`events/${uid}/${cuid}`).then(res => dispatch(addEvent(res.event)));
   };
 }
