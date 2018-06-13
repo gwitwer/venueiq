@@ -31,7 +31,7 @@ const getField = totals => event => field => {
       if (event.data[i].fields[j].slug === field) {
         return {
           value: totals[event.data[i].slug][field],
-          display: event.data[i].fields[j].display
+          display: event.data[i].fields[j].display,
         };
       }
       for (let k = 0; k < event.data[i].fields[j].fields.length; k++) {

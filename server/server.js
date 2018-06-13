@@ -17,8 +17,6 @@ const app = new Express();
 // Set Development modes checks
 const isDevMode = process.env.NODE_ENV === 'development' || false;
 const isProdMode = process.env.NODE_ENV === 'production' || false;
-console.log(process.env.NODE_ENV);
-console.log(process.env.FB_SECRET);
 
 // Run Webpack dev server in development mode
 if (isDevMode) {

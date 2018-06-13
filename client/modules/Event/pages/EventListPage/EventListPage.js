@@ -52,7 +52,7 @@ class EventListPage extends Component {
 // Actions required to provide data for this component to render in sever side.
 EventListPage.need = [
   (params, state) => fetchEvents(state.user.cuid),
-  fetchUser
+  fetchUser,
 ];
 
 // Retrieve data from store as props
