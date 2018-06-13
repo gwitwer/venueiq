@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react';
 
+// Import styles
 import styles from './EventReviewSection.css';
 
 // Import modules

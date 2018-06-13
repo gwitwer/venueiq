@@ -3,6 +3,11 @@ import React, { Component, PropTypes } from 'react';
 // Import Styles
 import styles from './EventReviewSection/EventReviewSection.css';
 
+// Import assets
+import minusBox from './minus-box.png';
+import plusBox from './plus-box.png';
+
+// Import modules
 import eventValueDisplays from '../util/eventValueDisplays';
 
 class EventReviewSubsection extends Component {
@@ -54,10 +59,10 @@ class EventReviewSubsection extends Component {
     return (
       <div>
         <div className={`${styles['event-review-subsection']} ${styles['event-review__field-row']}`}>
-          <div onClick={this.expand}>
+          <div className={styles['event-review-subsection-title']} onClick={this.expand}>
             {
               subsection.fields.length || subsection.canAdd
-                ? <span>{this.state.expanded ? '-' : '+'}</span>
+                ? <img alt="Toggle section" className={styles['event-review-expand-icon']} src={this.state.expanded ? minusBox : plusBox} />
                 : <div style={{ display: 'inline-block', width: '9.5px' }} />
             }
             {subsection.name}
