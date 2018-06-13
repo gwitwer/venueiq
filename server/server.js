@@ -135,6 +135,7 @@ const renderFullPage = (html, initialState) => {
           window.webpackManifest = ${JSON.stringify(chunkManifest)};
           //]]>` : ''}
         </script>
+        <script>console.log('Prod? ${isProdMode}')</script>
         <script src='${isProdMode ? assetsManifest['/vendor.js'] : '/vendor.js'}'></script>
         <script src='${isProdMode ? assetsManifest['/app.js'] : '/app.js'}'></script>
       </body>
