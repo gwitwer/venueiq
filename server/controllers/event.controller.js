@@ -8,9 +8,9 @@ import Event from '../models/event';
  * @returns void
  */
 export function getEvents(req, res) {
-  console.log('USER', req.session.user);
+  console.log('USER', req.session.user)
   const uid = process.env.NODE_ENV === 'production'
-    ? req.session.user.cuid
+    ? '1' // req.session.user.cuid
     : '1';
   const findEvents = Event.find({ uid }).sort({ time: -1 }).exec();
   findEvents.then(events => res.json({ events })).catch(err => res.json({ err }));
