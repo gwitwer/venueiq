@@ -13,10 +13,12 @@ const days = [
 ];
 
 export default function () {
+  console.log('DUMMY DATA!'); // eslint-disable-line
   // const eventCount = Event.count().exec();
   const removeEvents = Event.remove({}).exec();
   return removeEvents.then(count => {
     if (true || !count) { // eslint-disable-line no-constant-condition
+      console.log('ADDING'); // eslint-disable-line
       return Promise.all([
         createEvent({
           name: 'Latin Night',
