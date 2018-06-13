@@ -66,7 +66,7 @@ export function postSignup(req, res) {
         fb_exchange_token,
       }, fbResponse => {
         if (!fbResponse || fbResponse.error) {
-          console.log(!fbResponse ? 'error occurred' : fbResponse.error);
+          console.log(!fbResponse ? 'error occurred' : fbResponse.error); // eslint-disable-line no-console
           res.status(500).send({ err: fbResponse.error });
           return;
         }
