@@ -7,6 +7,7 @@ const initialState = {
 };
 
 const EventReducer = (state = initialState, action) => {
+  console.log(state); // eslint-disable-line no-console
   switch (action.type) {
     case UPDATE_FILTER :
       return {
