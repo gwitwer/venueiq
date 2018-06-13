@@ -66,8 +66,9 @@ export function postSignup(req, res) {
         fb_exchange_token,
       }, fbResponse => {
         if (!fbResponse || fbResponse.error) {
-          // console.log(!fbResponse ? 'error occurred' : fbResponse.error);
+          console.log(!fbResponse ? 'error occurred' : fbResponse.error);
           res.status(500).send({ err: fbResponse.error });
+          return;
         }
 
         const user = new User({
