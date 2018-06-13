@@ -7,6 +7,6 @@ dump.rdb
 dist
 coverage/
 .nyc_output/
-kynect-key-pair.pem
+viq-kp.pem
 db/
 config/keys
