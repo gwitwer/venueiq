@@ -8,7 +8,7 @@ import Event from '../models/event';
  * @returns void
  */
 export function getEvents(req, res) {
-  const { uid } = process.env.NODE_ENV === 'production'
+  const { uid } = process.env.NODE_ENV === 'production' && false // eslint-disable-line
     ? req.params
     : { uid: '1' };
   const findEvents = Event.find({ uid }).sort({ time: -1 }).exec();
@@ -23,7 +23,7 @@ export function getEvents(req, res) {
  */
 export function getEvent(req, res) {
   const { cuid } = req.params;
-  const { uid } = process.env.NODE_ENV === 'production'
+  const { uid } = process.env.NODE_ENV === 'production' && false // eslint-disable-line
     ? req.params
     : { uid: '1' };
   const findEvent = Event.findOne({ cuid, uid }).exec();
@@ -38,7 +38,7 @@ export function getEvent(req, res) {
  */
 export function updateEvent(req, res) {
   const { cuid } = req.params;
-  const { uid } = process.env.NODE_ENV === 'production'
+  const { uid } = process.env.NODE_ENV === 'production' && false // eslint-disable-line
     ? req.params
     : { uid: '1' };
   Event.findOneAndUpdate({ cuid, uid }, req.body.update, { new: true }, (err, event) => {

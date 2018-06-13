@@ -16,7 +16,6 @@ export default function () {
   // const eventCount = Event.count().exec();
   const removeEvents = Event.remove({}).exec();
   return removeEvents.then(count => {
-    console.log('adding..');
     if (true || !count) { // eslint-disable-line no-constant-condition
       return Promise.all([
         createEvent({
