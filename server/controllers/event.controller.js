@@ -8,6 +8,7 @@ import Event from '../models/event';
  * @returns void
  */
 export function getEvents(req, res) {
+  console.log('USER', req.session.user);
   const uid = process.env.NODE_ENV === 'production'
     ? req.session.user.cuid
     : '1';

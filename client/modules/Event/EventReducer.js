@@ -58,7 +58,7 @@ const EventReducer = (state = initialState, action) => {
 /* Selectors */
 
 // Get all events
-export const getEvents = state => state.events.data;
+export const getEvents = state => state.events.data || [];
 
 // Get event by cuid
 export const getEvent = (state, cuid) => state.events.data.filter(event => event.cuid === cuid)[0];
