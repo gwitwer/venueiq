@@ -5,33 +5,58 @@ import { Link } from 'react-router';
 import styles from './EventListItem.css';
 import mainStyles from '../../../../main.css';
 
-const getField = event => field => {
+// Import Methods
+import getTotals from '../../util/getTotals';
+import eventValueDisplays from '../../util/eventValueDisplays';
+
+const getField = totals => event => field => {
   const keys = Object.keys(event);
   for (let i = 0; i < keys.length; i++) {
     if (keys[i] === field) {
-      return event[keys[i]];
+      return {
+        value: event[keys[i]],
+        display: 'eye',
+      };
     }
   }
 
   for (let i = 0; i < event.data.length; i++) {
     if (event.data[i].slug === field) {
-      return event.data[i].value;
+      return {
+        value: totals[field].total,
+        display: event.data[i].display,
+      };
     }
     for (let j = 0; j < event.data[i].fields.length; j++) {
       if (event.data[i].fields[j].slug === field) {
-        return event.data[i].fields[j].value;
+        return {
+          value: totals[event.data[i].slug][field],
+          display: event.data[i].fields[j].display
+        };
       }
       for (let k = 0; k < event.data[i].fields[j].fields.length; k++) {
         if (event.data[i].fields[j].fields[k].slug === field) {
-          return event.data[i].fields[j].fields[k].value;
+          return {
+            value: event.data[i].fields[j].fields[k].value,
+            display: event.data[i].fields[j].fields[k].display,
+          };
         }
       }
     }
   }
-  return 'N/A';
+  return {
+    display: 'eye',
+    value: 'N/A',
+  };
+};
+
+const getFormattedField = totals => event => field => {
+  const displayField = getField(totals)(event)(field);
+  return eventValueDisplays[displayField.display](displayField.value);
 };
 
 const EventListItem = ({ event, activeFields }) => {
+  const parEvalGFF = getFormattedField(getTotals(event))(event);
   return (
     <Link to={`/events/${event.cuid}`}>
       <div className={styles['event-list-item']}>
@@ -40,7 +65,7 @@ const EventListItem = ({ event, activeFields }) => {
         </div>
         {activeFields.map(field => (
           <div className={styles['event-list-header__item']} key={`${event.cuid}-${field}`}>
-            {getField(event)(field)}
+            {parEvalGFF(field)}
           </div>
         ))}
         <div>
