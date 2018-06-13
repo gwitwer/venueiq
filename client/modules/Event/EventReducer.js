@@ -7,7 +7,6 @@ const initialState = {
 };
 
 const EventReducer = (state = initialState, action) => {
-  console.log(state); // eslint-disable-line no-console
   switch (action.type) {
     case UPDATE_FILTER :
       return {
@@ -59,7 +58,10 @@ const EventReducer = (state = initialState, action) => {
 /* Selectors */
 
 // Get all events
-export const getEvents = state => state.events.data || [];
+export const getEvents = state => {
+  console.log(state);
+  return state.events.data || [];
+};
 
 // Get event by cuid
 export const getEvent = (state, cuid) => state.events.data.filter(event => event.cuid === cuid)[0];
